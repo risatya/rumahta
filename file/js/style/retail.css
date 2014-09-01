@@ -1,0 +1,1777 @@
+/************************************************************************************
+RESET
+*************************************************************************************/
+header,nav,article,footer,section,aside,figure,figcaption{display:none; float: left;}/* For older browsers */
+
+
+html, body, div, header, footer, nav, article, section, figure, aside, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    vertical-align: baseline;
+    background: transparent;
+    zoom: 1;
+}
+
+button{white-space: nowrap; /* fixes button word wraps in IE7 */}
+
+
+/************************************************************************************
+END RESET
+*************************************************************************************/
+
+/************************************************************************************
+GENERAL STYLING
+*************************************************************************************/
+
+header, footer, nav, article, aside, section, figure, figcaption, details, summary, small {
+    display: block;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+a:focus img {
+    outline: inherit;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body {
+    width: 995px;
+    font-family: arial,helvetica,clean,sans-serif;
+    font-size: 90%;
+    line-height: 1em;
+}
+h1, h2, h3, h4, h5, h6, summary {
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+h1 {
+    font-size: 1.25em;
+    margin: 0 0;
+}
+h2 {
+    font-size: 1.2em;
+}
+h3 {
+    font-size: 1.15em;
+}
+h4 {
+    font-size: 1.1em;
+}
+h5, summary, .more {
+    font-size: 1.05em;
+}
+h6 {
+    font-size: 1em;
+}
+p, dl, ol, ul, figcaption, small {
+    font-size: 12px;
+    line-height: 18px;
+}
+p p, p dl, p ol, p ul, dl p, dl dl, dl ol, dl ul, ol p, ol dl, ol ol, ol ul, ul p, ul dl, ul ol, ul ul, figcaption p, figcaption dl, figcaption ol, figcaption ul, small p, small dl, small ol, small ul {
+    font-size: 12px;
+}
+blockquote, p, dl, ol, ul, small {
+    margin: 0 0 1em;
+}
+ol, ul {
+    margin-left: 1.5em;
+}
+ol {
+    list-style: decimal;
+}
+ul {
+    list-style: disc;
+}
+a[href^=tel] {
+    text-decoration: none;
+}
+strong, dt {
+    font-weight: bold;
+}
+em, cite {
+    font-style: italic;
+}
+a {
+    text-decoration: none;
+    color: #0F57C2;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+    color: #e74b00;
+}
+a:visited {
+    color: #800080;
+    text-decoration: none;
+}
+a.tel {
+    cursor: text;
+}
+a.tel, a.dial {
+    font-weight: bold;
+    white-space: nowrap;
+}
+a.tel:hover, a.tel:focus, a.dial:hover, a.dial:focus {
+    text-decoration: none;
+}
+figure {
+    text-align: center;
+    margin: 1em 0;
+}
+figure img {
+    max-width: 100%}
+details {
+    border: 1px solid;
+    border-width: 1px 0;
+    margin: 1em -1em 0;
+    padding: 0 1em;
+}
+details+details {
+    margin-top: -1px;
+}
+details summary {
+    cursor: default;
+    font-weight: normal;
+    padding: .65em 1em .65em 1em;
+    margin: 0 -1em;
+}
+details summary::-moz-details-marker, details summary::-ms-details-marker, details summary::-o-details-marker, details summary::-webkit-details-marker, details summary::details-marker {
+    display: none;
+}
+.detailed details {
+    background: url(/ftgw/pages/images/mobileApp/arrow-right.png) 0.4em 0.25em no-repeat;
+    padding: 0 1em 0 2.25em;
+}
+.detailed details[open], .detailed details.open {
+    background-image: url(/ftgw/pages/images/mobileApp/arrow-down.png);
+    padding-bottom: 1em;
+}
+.detailed details>:last-child {
+    margin-bottom: 0;
+}
+.detailed details summary {
+    cursor: pointer;
+    outline: none;
+    padding: .65em 1em .65em 2.25em;
+    margin: 0 -1em 0 -2.25em;
+}
+@media only screen and (-moz-min-device-pixel-ratio: 2),  only screen and (-ms-min-device-pixel-ratio: 2),  only screen and (-o-min-device-pixel-ratio: 2),  only screen and (-webkit-min-device-pixel-ratio: 2),  only screen and (min-device-pixel-ratio: 2) {
+    .detailed details {
+        background-image: url(/ftgw/pages/images/mobileApp/arrow-right-2x.png);
+        background-size: 40px 30px;
+    }
+    .detailed details[open], .detailed details.open {
+        background-image: url(/ftgw/pages/images/mobileApp/arrow-down-2x.png);
+    }
+}.more {
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    font-weight: bold;
+    margin: 0 -1em;
+}
+.more a {
+    display: block;
+    padding: .5em 3em .5em 1em;
+    text-decoration: none;
+}
+table {
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+table caption {
+    font-style: italic;
+    caption-side: bottom;
+    width: 100%}
+table th, table td {
+    border: 1px solid;
+    padding: .25em .5em;
+    vertical-align: top;
+}
+table thead th {
+    letter-spacing: .1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+table tbody th {
+    text-align: left;
+}
+table tfoot th, table tfoot td {
+    border-width: 0;
+    border-top-width: 1px;
+}
+table td.numeric {
+    text-align: right;
+}
+label, legend {
+    float: left;
+    display: inline;
+    /* font-weight: bold; */
+    width: 105px;
+    font-size: 12px;
+}
+label em, form .note {
+    display: block;
+    font-weight: normal;
+    font-size: .9em;
+    font-style: italic;
+    margin-bottom: 0;
+}
+input[type="text"], input[type="password"], textarea {
+    /* border: 1px solid;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    padding-left: .25em;
+    padding-right: .25em; */
+    width: 156px;
+    float: left;
+    font: 12px arial,helvetica,clean,sans-serif;
+/*    border: 1px solid #999;*/
+/*    height: 14px;*/
+}
+select {
+    border: 1px solid #999;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 24px;
+    width: 175px;
+}
+form ol, form ul {
+    font-size: 1em;
+    list-style: none;
+    margin: 0;
+}
+form li {
+    clear: both;
+    margin-bottom: .75em;
+}
+form .date {
+    position: relative;
+}
+form .date li {
+    display: inline;
+    display: inline-block;
+    margin: 0;
+}
+form .date label {
+    position: absolute;
+    left: -999em;
+}
+form .date select {
+    display: inline-block;
+    width: auto;
+}
+form .group li, form .confirm li {
+    display: inline-block;
+    width: 49%;
+    margin: 0;
+}
+form .group label, form .confirm label {
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+    overflow: visible;
+    margin-bottom: -0.5em;
+    margin-top: -0.5em;
+    padding-left: 1.7em;
+    padding-bottom: .5em;
+    padding-top: .5em;
+    position: relative;
+}
+form .group input, form .confirm input {
+    border: auto;
+    position: absolute;
+    left: 0.1em;
+    width: auto;
+}
+
+form .yes-no li {
+    width: auto;
+    margin: 0 1em 0 0;
+}
+form li.error strong {
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+}
+form li.error label:before, form li.error legend b:before {
+    content: none;
+}
+form li.error label{
+    background-image: url(./form-ajax.png);
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+form li.error.group label:before {
+    content: none;
+}
+
+
+button, a.button {
+    /* background: transparent;
+    border: 4px solid;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.125em;
+    margin: 5px 0;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+    -webkit-appearance: none; */
+}
+button::-moz-focus-inner, a.button::-moz-focus-inner {
+    border: none;
+}
+button b, a.button b {
+    display: block;
+    font-size: .95em;
+    margin: -1px 0;
+}
+button.text {
+    border: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    display: inline-block;
+    font-size: .9em;
+    float: right;
+    height: 1.25em;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    text-decoration: underline;
+    vertical-align: baseline;
+    width: auto;
+    position: relative;
+    top: .15em;
+    right: -1em;
+}
+a.button:hover, a.button:focus {
+    text-decoration: none;
+}
+.buttons {
+    margin-top: 1em;
+    padding-bottom: .25em;
+    text-align: left;
+}
+.notice {
+    background: .7em .85em no-repeat;
+    border: 1px inset;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    padding: .8em 1em 1em 45px;
+    margin: 10px 0;
+}
+.notice h6 {
+    margin-bottom: .5em;
+    padding-top: .25em;
+}
+.notice>:first-child {
+    margin-top: 0;
+}
+.notice>:last-child {
+    margin-bottom: 0;
+}
+.notice ol, .notice ul {
+    font-size: .875em;
+}
+.notice li {
+    margin-bottom: 0;
+}
+.notice .more {
+    border-bottom: 0;
+}
+.notice .more, .notice details {
+    margin: 0 -1em 0 -45px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+.notice .more:last-child, .notice details:last-child {
+    border-bottom-width: 0;
+    margin-bottom: -1em;
+}
+.notice .buttons {
+    margin-left: -45px;
+    padding-left: 1em;
+}
+.notice .buttons+.more {
+    margin-top: 1em;
+}
+.notice .buttons button, .notice .buttons a.button {
+    margin: 0;
+}
+#banner {
+    padding: 8px 12px 6px;
+    margin: 0 -1em;
+    text-align: center;
+}
+#logo {
+    display: inline;
+}
+#logo img {
+    background: url(/ftgw/pages/images/mobileApp/logo-reversed.png) no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 27px;
+    height: 0;
+    width: 112px;
+}
+
+button b{ margin: 2px 0; padding: 0 4px; font: 12px arial,helvetica,clean,sans-serif;}
+
+
+
+
+#page-header h2{ width: 300px;}
+/************************************************************************************
+END GENERAL STYLING
+*************************************************************************************/
+
+
+
+
+/************************************************************************************
+COMPONENTS
+*************************************************************************************/
+
+
+/************************************************************************************
+HEADER
+*************************************************************************************/
+#header {background-image:url(./navless-gradient.gif); height:37px; border-top: 1px solid ##76B406; border-bottom:4px solid #068037; background-position:0px 0px; background-repeat:repeat-x; padding:0px 0px 0px 0px; margin: 0 0 20px 0; width:100%;}
+#header img {border: 0px; display: block; margin: 0px 0px 0px 6px; padding:6px 0px 0px 0px; float:left;}
+/************************************************************************************
+END HEADER
+*************************************************************************************/
+
+
+/************************************************************************************
+TITLE ICON
+*************************************************************************************/
+div.lockIcon{
+    display: inline-block;
+    margin-left: 3px;
+    width: 15px;
+    height: 15px;
+    background-image: url('./15_15_lock.png');
+    background-repeat: no-repeat;
+}
+/************************************************************************************
+END TITLE ICON
+*************************************************************************************/
+
+
+/************************************************************************************
+COLUMNS
+*************************************************************************************/
+#column-left{
+    width: 350px;
+    height: auto;
+    float: left;
+    margin: 0 10px;
+}
+
+#column-right{
+    height: auto;
+    float: left;
+    width: 360px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border-left: 1px solid #DDD;
+    padding-left: 10px;
+}
+
+.column-single{
+    width: 740px;
+    height: auto;
+    float: left;
+    margin: 0 10px;
+}
+/************************************************************************************
+END COLUMNS
+*************************************************************************************/
+
+
+
+/************************************************************************************
+PAGE HEADER
+*************************************************************************************/
+/************************************************************************************
+END PAGE HEADER
+*************************************************************************************/
+
+
+/************************************************************************************
+FORM VALIDATION DEFAULT
+*************************************************************************************/
+#loginBoxDefault{width: 100%;}
+#loginBoxDefault h2{
+    margin-bottom: 40px;
+    margin-bottom: 15px;
+}
+#loginBoxDefault label{
+    margin: 3px 20px 0 0;
+    text-align: right;
+    width: 80px;
+    position:static !important;
+}
+#loginBoxDefault #rememberMe, #loginBoxRemMe #rememberMe{
+    width: 185px;
+}
+#loginBoxDefault #rememberMe input, #loginBoxRemMe #rememberMe input{
+    margin-left: 110px;
+}
+#loginBoxDefault .startPage{
+    width: 244px;
+    padding-top: 2px;
+    margin-top: -10px;
+}
+#loginBoxDefault button{
+    margin: 8px 0 0 99px;
+    padding: 0;
+    height: 25px;
+}
+
+
+
+#loginBoxDefault span.showHide{
+    margin-left: 5px;
+}
+.verticalRule{
+    height: 210px;
+    width: 1px;
+    border-left: 1px solid #CCC;
+    float: left;
+}
+
+#loginBoxDefault ol li{margin: 0 0 0 0; padding: 7px 0;}
+
+#loginBoxDefault input[type="text"], #loginBoxDefault input[type="password"]{
+    width: 167px;
+    height: 18px;
+    border: 1px solid #B0B0B0;
+}
+
+#loginBoxDefault select{
+    float: left;
+    width: 173px;
+    height: 22px;
+    font-size: 11px;
+}
+
+#loginBoxDefault form li.error strong {
+    font-size: 11px;
+    margin: 5px 0 10px 100px;
+}
+
+#loginBoxDefault .error input {
+    width: 165px;
+    height: 18px;
+    border: 1px solid #C00;
+}
+
+/************************************************************************************
+END FORM VALIDATION DEFAULT
+*************************************************************************************/
+
+/************************************************************************************
+FORM VALIDATION TRIAL FORM
+*************************************************************************************/
+
+#loginBoxNoRemMe ol li{
+    /*	padding: 0 0 15px 0;*/
+}
+#loginBoxNoRemMe h2{
+    margin-bottom: 40px;
+}
+#loginBoxNoRemMe label{
+    margin: 0px 5px 15px 0;
+    text-align: right;
+}
+#loginBoxNoRemMe button{
+    margin: -10px 0 0 107px;
+    padding: 0 4px;
+}
+.needHelp{
+    width: 230px;
+}
+/************************************************************************************
+END FORM VALIDATION
+*************************************************************************************/
+
+
+/************************************************************************************
+BUBBLE PROPERTIES
+*************************************************************************************/
+#usernameBubble{
+	position:relative;
+	z-index:999;
+}
+.bubble{
+    width: 11px;
+    height: 11px;
+    background-image: url('./11_11_question1.gif');
+    background-repeat: no-repeat;
+    position: relative;
+    text-decoration: none;
+    margin: 5px 0 0 5px;
+}
+.bubble div span{
+    margin-left: -999em;
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.bubble a{
+    text-decoration: none;
+}
+.bubble a:hover div span{
+    font-family: Arial, Calibri, Tahoma, Geneva, sans-serif;
+    position: absolute; left: 1em; top: 4em; z-index: 99;
+    margin: -25px 0 0 -221px; width: 225px;
+    opacity: 1;
+/*    filter: alpha(opacity=100);*/
+
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter:"progid:DXImageTransform.Microsfot.Alpha(Opacity=50)";
+
+    /* transition */
+    -webkit-transition: opacity .7s;
+    -moz-transition: opacity .7s;
+    transition: opacity .7s;
+}
+.bubbleArea{
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    line-height: 15px;
+}
+.bubbleProperties{
+    padding: 10px;
+    background: #FFF;
+    border: 1px solid #000;
+    color: #000;
+}
+.bubbleArrow{
+    width: 22px;
+    height: 19px;
+    background-image: url('./arrow_top_blk.gif');
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 20px;
+    top: -18px;
+}
+.bubble ul li{
+    list-style: disc outside none;
+    padding: 0;
+    margin: 0 0 0 10px;
+}
+#usernameBubble, #passwordBubble{
+    float: left;
+}
+
+span.bubbleProperties ul li{
+    padding: 0 !important;
+    margin: 0 0 0 10px !important;
+}
+
+/**** IE7 FIX ****/
+a{z-index: 0;} /* keeps the bubble layer above other links if it overlays on top of others */
+/************************************************************************************
+END BUBBLE PROPERTIES
+*************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************************************************************************************
+PEEK PAGES
+**************************************************************************************************/
+
+/************************************************************************************
+LOGIN BOX GRAY
+*************************************************************************************/
+/************************************************************************************
+LOGIN BOX GRAY
+*************************************************************************************/
+#loginBoxGray {
+    height: 233px;
+    width: 155px;
+    background-color: #EEE;
+    padding: 3px 3px 0 9px;
+    border: 1px solid #DDD;
+    margin-bottom: 20px;
+}
+
+#loginBoxGray img{
+    float: right;
+}
+
+#loginBoxGray ol li{
+    margin: 5px 0;
+    padding: 3px 0 4px 0;
+}
+#loginBoxGray h3{
+    font-size: .75em;
+    margin: 0 0 5px 0;
+}
+#loginBoxGray label{
+    text-align: left;
+    float: left;
+    width: 50px;
+    font-size: 11px;
+}
+#loginBoxGray .buttons button{
+    padding: 2px;
+    margin: 8px 0 0 0;
+    height: 25px;
+}
+#loginBoxGray .buttons button b{
+    font-size: 10px;
+}
+
+#loginBoxGray p{font-size: 11px; margin: 0; line-height: 19px;}
+#loginBoxGray input[type="text"], #loginBoxGray input[type="password"] {
+    width: 122px;
+    height: 15px;
+
+}
+#loginBoxGray #usernameBubble {}
+
+#loginBoxGray #usernameBubble, #loginBoxGray #passwordBubble{
+    float: left;
+}
+
+
+
+#loginBoxGray form ol li{
+    padding: 0px 0 0px;
+}
+
+#loginBoxGray label{
+    padding: 0 0 2px 0;
+}
+
+#loginBoxGray #passwordBubble, #loginBoxGray #usernameBubble{
+    margin: 3px 0 0 5px;
+}
+
+#loginBoxGray form li.error label{
+    background-image: url(./error2.gif);
+    background-repeat: no-repeat;
+    padding-left: 15px;
+}
+
+#loginBoxGray form li.error{
+    padding: 1px 0 0 0;
+    margin: 0;
+}
+
+#loginBoxGray form li.error strong {
+    width: 100%;
+    margin: 0;
+    font-size: 11px;
+}
+/************************************************************************************
+END FORM VALIDATION
+*************************************************************************************/
+
+/************************************************************************************
+PEEK COLUMNS
+*************************************************************************************/
+#peek-column-left{
+    width: 150px;
+    height: auto;
+    float: left;
+    margin: 0 35px 20px 10px;
+}
+
+#peek-center-column{
+    margin: 5px 0 20px 5px;
+    width: 615px;
+    float: left;
+}
+.smallerCenterColumn #peek-center-column{
+    width: 595px;
+}
+
+#peek-center-column #vertLine{
+    width: 100%;
+    border-right: 1px solid #dbdcde;
+    float: left;
+}
+
+#peek-center-column #vertLine img{
+    margin-bottom: 40px;
+    float: right;
+}
+
+
+#peek-column-right{
+    height: auto;
+    float: left;
+    width: 160px;
+    margin: 45px 0 20px 0px;
+    padding-left: 10px;
+}
+
+#peek-column-right #vertLine{
+    width: 100%;
+    border-left: 1px solid #dbdcde;
+    float: left;
+    padding-left: 10px;
+}
+/************************************************************************************
+END PEEK COLUMNS
+*************************************************************************************/
+
+
+/************************************************************************************
+PEEK SPECIFIC
+*************************************************************************************/
+#peekHeaderTitle{ color: #FFF; float: right; margin: 10px 15px 0 0; font-size: 16px; font-family: arial; font-weight: bold }
+#header sup{ vertical-align: top; font-size: x-small; }
+
+#PEEK .bubble li{ margin: 0; }
+#PEEK #passwordBubble .bubbleProperties{ padding-left: 20px; }
+#PEEK .bubble a:hover div span{	margin: -25px 0 0 -40px; width: 225px; font-size: 12px; line-height: 15px; font-family: Arial,Helvetica,sans-serif;}
+#PEEK .bubbleArrow{ left: 20px; }
+
+#peek-center-column h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+}
+
+#peek-center-column h2{
+    margin: 8px 0 5px 0;
+}
+#peek-center-column h3, #peek-column-right h3{
+    margin: 10px 0 5px 0;
+    font-size: .85em;
+}
+#peek-column-right .hr{
+    margin: 10px 0 20px 0;
+    height: 1px;
+    width: 100%;
+}
+.font-small{font-size: .75em;}
+
+#PEEK #peek-center-column ol li {
+    margin: 0 0 10px 0;
+    padding-right: 10px;
+    line-height: 1.5em;
+}
+
+#PEEK .beforeInvesting{
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 8px 0 8px 10px;
+    margin: 20px 0 0 0;
+    font-weight: bold;
+}
+
+#PEEK #active-trader{
+    border: 1px solid #dbdcde;
+    padding: 0 10px;
+    margin: 10px 0;
+    width: 580px;
+}
+#PEEK #active-trader img{
+    float: right;
+    margin: -10px 120px 18px 0;
+}
+
+#PEEK #active-trader sup{
+    vertical-align: super;
+    font-size: 9px;
+}
+
+#peek-center-column ul, #peek-column-right ul {
+    margin: 0;
+}
+
+#peek-center-column ul li, #peek-column-right ul li{
+    background-image: url("./greenbulsq.gif");
+    background-position: 0 6px;
+    background-repeat: no-repeat;
+    list-style-type: none;
+    margin: 0;
+    padding:0 7px 8px 11px;
+    line-height: 1.2em;
+}
+
+#PEEK #peek-center-column li span {
+    font-weight: bold;
+}
+
+
+#PEEK #tranfersNote{
+    float: left;
+    width: 100%;
+    margin: 0 0 40px 10px;
+}
+
+#PEEK #tranfersNote p{font-size: .75em;}
+
+
+li sup, p sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+#PEEK .column-single p{
+    font-size: .75em;
+}
+
+
+
+/************************************************************************************
+END PEEK SPECIFIC
+*************************************************************************************/
+
+
+/************************************************************************************
+FORM WITH REMBMER ME
+*************************************************************************************/
+#loginBoxRemMe { width: 300px; }
+#loginBoxRemMe { margin-left: 20px; }
+#loginBoxRemMe ol li{ padding: 0 0 15px 0; }
+#loginBoxRemMe h2{ margin-bottom: 40px; }
+#loginBoxRemMe label{ margin: 1px 5px 0 0; text-align: right; }
+#loginBoxRemMe .rememberMe{ margin: 0 0 0 0; width: 188px; }
+#loginBoxRemMe button{ margin: 0 0 0 83px; padding: 0 4px; }
+#loginBoxRemMe .needHelp{ width: 205px; }
+#loginBoxRemMe select {
+    float: left;
+    height: 22px;
+    width: 162px;
+}
+/************************************************************************************
+END FORM
+*************************************************************************************/
+
+
+/************************************************************************************
+ALREADY MEMBER
+*************************************************************************************/
+#alreadyMember p {margin: 0 0 3px 0;}
+/************************************************************************************
+END ALREADY MEMBER
+*************************************************************************************
+
+/************************************************************************************
+REGISTER-HELP
+*************************************************************************************/
+#register-help h2{ margin: 0 0 15px 0; }
+#register-help p{ margin: 0 0 20px 0; }
+/************************************************************************************
+END REGISTER-HELP
+*************************************************************************************
+
+/************************************************************************************
+BECOME-MEMBER
+*************************************************************************************/
+#becomeMember h2{ margin: 20px 0; }
+/************************************************************************************
+END BECOME-MEMBER
+*************************************************************************************
+
+/************************************************************************************
+PAGE SPECIFIC
+*************************************************************************************/
+#simple h2, #trial h2, #split h2, #pas h2, #eprefill h2, #PEEK h2, #PEEK h1{color: #408800;}
+#pas #column-right{ height: 215px; } /* Needed to extend the v-line in right column */
+#eprefill #column-right{ height: 180px; } /* Needed to extend the v-line in right column */
+/************************************************************************************
+END PAGE SPECIFIC
+*************************************************************************************
+
+//************************************************************************************
+ICONS
+*************************************************************************************/
+.bulletIcon{
+    margin: 3px 5px 0 0;
+    float: left;
+    width: 11px;
+    height: 11px;
+    background-image: url('./11_11_bullet_b.gif');
+    background-repeat: no-repeat;
+}
+
+.small li {
+    background-image: url("./greenbulsq.gif");
+    background-position: 0 8px;
+    background-repeat: no-repeat;
+    list-style-type: none;
+    margin: 0 0 0 -17px;
+    padding: 0 7px 8px 11px;
+}
+/************************************************************************************
+END ICONS
+*************************************************************************************/
+
+
+/************************************************************************************
+COUNTRIES AND CURRENCIES
+*************************************************************************************/
+.countries, .currency{
+    display: none;
+    left: 520px;
+    position: absolute;
+    top: 240px;
+    width: 400px;
+}
+
+.countries .content, .currency .content{
+    padding: 20px 0 0 0;
+}
+.countries .content h3, .currency .content h3{
+    margin-left: 20px;
+}
+.countries, .currency{
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    margin: 0;
+    z-index: 99999;
+}
+
+.countries ul li{width: 110px;}
+
+.countries ul, .currency ul{
+    list-style-type: none;
+}
+
+.countries ul, .currency ul{
+    float: left;
+}
+
+.countries ul li, .currency ul li {
+    background: none repeat scroll 0 0 transparent;
+    font-size: 1em;
+    padding: 0 0 8px;
+}
+
+.countries ul li img, .currency ul li img{
+    margin-right: 5px;
+}
+/************************************************************************************
+END COUNTRIES AND CURRENCIES
+*************************************************************************************/
+
+
+
+/************************************************************************************
+OTHER-SITES
+*************************************************************************************/
+#test{}/* causes issues if removed */
+
+#other-sites{
+    width: 765px;
+    margin: 15px 0 0 0;
+}
+
+#other-sites h2{
+    margin: 0 0 20px 0;
+}
+
+#other-sites a{
+    font-size: 1em;
+}
+
+#other-sites p{
+    margin: 0 0 10px 0;
+}
+
+#other-sites sup{
+
+
+}
+
+#other-sites .hr{
+    border-bottom: 1px solid #CCC;
+    float: left;
+    width: 100%;
+    margin: 0 0 5px 0;
+    position: relative;
+}
+/************************************************************************************
+END OTHER-SITES
+*************************************************************************************/
+
+/* Short */
+.hr{
+    border-bottom: 1px solid #CCC;
+    float: left;
+    width: 740px;
+    margin: 0 0 5px 10px;
+}
+/* Wide */
+.hrWide{
+    border-bottom: 1px solid #CCC;
+    float: left;
+    width: 980px;
+    margin: 0 0 5px 10px;
+}
+
+/************************************************************************************
+SECURITY LINKS
+*************************************************************************************/
+#security-link { margin: 0px 0px 40px 10px; width:745px; color: #666;}
+#security-link p{font-size: .75em;}
+/************************************************************************************
+END SECURITY LINKS
+*************************************************************************************/
+
+
+/************************************************************************************
+DEFAULT CONDITIONS
+*************************************************************************************/
+#defaultConditions{width: 100%; padding-left: 10px; margin-bottom: 30px;}
+#defaultConditions p{
+    font-size: .85em;
+    margin: 10px 0;
+    line-height: 14px;
+}
+
+#defaultConditions .conditions {
+    font-size: 11px;
+}
+#defaultConditions .conditions a {
+    font-size: 11px;
+}
+/************************************************************************************
+END CONDITIONS
+*************************************************************************************/
+
+
+/************************************************************************************
+CONDITIONS
+*************************************************************************************/
+#conditions{width: 720px;}
+#conditions p{
+    font-size: .85em;
+    margin: 10px 0;
+    color: #666;
+}
+#conditions .conditions {
+    font-size: .75em;
+}
+#conditions .conditions a {
+    font-size: 1.1em;
+}
+.gray{color: #666;}
+/************************************************************************************
+END CONDITIONS
+*************************************************************************************/
+
+
+/************************************************************************************
+fidelityBrokerage
+*************************************************************************************/
+#fidelityBrokerage p{
+    font-size: .75em;
+    margin: 0 0 10px 10px;
+}
+/************************************************************************************
+END fidelityBrokerage
+*************************************************************************************/
+
+
+/************************************************************************************
+ALL COMPONENTS
+*************************************************************************************/
+#other-sites, #conditions{ margin-left: 10px; }
+/************************************************************************************
+END ALL COMPONENTS
+*************************************************************************************/
+
+
+/************************************************************************************
+FOOTER
+*************************************************************************************/
+#footer.errorFooter	{
+    width: 765px;
+    margin-top: 20px;
+}
+#footer.errorFooter p:nth-child(4){
+    margin-top: 25px;
+}
+
+
+#footer	{
+    font-family: arial,helvetica,sans-serif;
+    width: 995px;
+    height: 85px;
+    text-align: right;
+    padding: 10px 0 0 0;
+    margin: 0;
+    border-top: 1px solid #CCC;
+    font-weight: normal;
+    background-color: #EEE;
+    color: #666;
+}
+
+#footer .footerLogo {float:left; margin: -10px 0px 0px 15px;}
+#footer a:link, .footer a:visited { margin: 0 3px; text-decoration: none; color: #0F57C2; font-weight: normal;}
+#footer a:active, .footer a:focus { text-decoration:underline; color:#E74600; font-weight:normal;}
+#footer a:hover { text-decoration:underline; color:#0F57C2;}
+#footer p { font-size: .75em; line-height: 1.40em; margin: 0 10px 0 0; text-align:right; text-decoration:none; font-weight:normal;}
+#footer .copyright{ padding:0px 0px 1px 0px; margin:5px 7px 0 0;}
+#footer .rights{ padding:0px 0px 0px 0px; margin:3px 7px 3px 0;}
+
+sup{font-size:14px;}
+/************************************************************************************
+END FOOTER
+*************************************************************************************/
+
+.bold{font-weight: bold;}
+
+/************************************************************************************
+VALIDATION
+*************************************************************************************/
+.errorInputRow input, .errorInputRow select
+{
+    border-color: 1px solid #CC0000 !important;
+}
+
+.errorInputRow th label
+{
+    background:url("./form-ajax.png") no-repeat scroll 0% -3px transparent
+}
+
+.goodInputRow th label
+{
+    background:url("./form-ajax1.png") no-repeat scroll 0% -100px transparent;
+}
+
+.focus
+{
+    border-color: #6289A9 !important;
+}
+
+
+
+
+.errorMessage
+{
+    font-size: 12px;
+    color: #C00;
+    font-weight: normal;
+    margin: 0px 20px 0px 40px;
+    text-align: center;
+    background-color: #ccc;
+}
+
+.error input{
+    border: 1px solid #C00;
+    width: 160px;
+    height: 15px;
+}
+
+
+/************************************************************************************
+END VALIDATION
+*************************************************************************************/
+
+
+
+
+/************************************************************************************
+ERROR PAGES
+*************************************************************************************/
+.errBody{width: 765px;}
+
+#timeoutAci h1 {
+    color: #408800;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0 15px;
+}
+
+#errHeader {
+    width: 765px;
+    height: 0px;
+    background-color: #3F8800;
+    border-bottom: 4px solid #2C6100;
+    overflow: hidden;
+    padding: 2px 0 30px 0;
+}
+
+.errLayout h2 {
+    background: url("./error_msg_icon.gif") no-repeat scroll 10px 10px transparent;
+    border: 1px solid #CC0000;
+    color: #CC0000;
+    font-size: 14px;
+    line-height: 1.5em;
+    margin: 20px 0 20px 10px;
+    min-width: 225px;
+    padding: 7px 10px 12px 30px;
+    width: 705px;
+    font-weight: normal;
+}
+
+.errLayout ul li {
+    background-image: url("./11_11_bullet_b.gif");
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+    list-style: none;
+    font-size: 12px;
+    padding: 0 0 10px 17px;
+    margin: 0 0 0 -10px;
+}
+
+#resetpin ul li#cancelLink {    
+    background:url("./closex_red_11_11.gif") no-repeat scroll left 2px transparent;
+	padding: 0 0 10px 17px;
+    margin: 0 0 0 -10px;
+	font-family: Arial, Helvetica, sans-serif !important;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.errLayout p {
+    margin: 0 0 0 10px;
+}
+
+
+
+
+
+form li.error strong {
+	width:180px;
+    color: #CC0000;
+    display: block;
+    font-weight: normal;
+    min-height: 18px;
+    font-size: 12px;
+    margin: 5px 0 15px 0px;
+    float: left;
+}
+/************************************************************************************
+END ERROR PAGES
+*************************************************************************************/
+
+
+/****** Sets default to hide ******************/
+
+#useSavedId{
+    margin-left: 130px;
+    font-size: 12px;
+}
+
+.showHide{display: none; margin: 0;}
+
+
+#SetLoginDefaults{float: left; margin-left: 100px;}
+#SetLoginDefaultsLabel{ width: 132px !important; padding-bottom: 20px;}
+
+
+
+/************************************************************************************
+TRADE PAGE
+*************************************************************************************/
+#PEEK.Trade .font-small{font-size: 11px;}
+#PEEK.Trade #vertLine p{padding: 5px 10px 10px 0; margin-right: 10px;}
+/************************************************************************************
+END TRADE PAGE
+*************************************************************************************/
+
+/************************************************************************************
+SUMMARY PAGE
+*************************************************************************************/
+#PEEK.Summary #peek-center-column #vertLine ul{width: 610px;}
+#PEEK.Summary #peek-center-column ul li{ line-height: 17px;}
+/************************************************************************************
+END SUMMARY PAGE
+*************************************************************************************/
+
+/************************************************************************************
+BILLPAY PAGE
+*************************************************************************************/
+#PEEK.BillPay #peek-center-column {width: 605px; line-height: 17px;}
+#PEEK.BillPay #peek-center-column ul li{line-height: 15px;}
+#PEEK.BillPay .column-single{margin: 0 0 40px 10px;}
+/************************************************************************************
+END BILLPAY PAGE
+*************************************************************************************/
+
+/************************************************************************************
+ALERTS PAGE
+*************************************************************************************/
+#PEEK.Alerts #peek-center-column {width: 595px; line-height: 18px; margin: 0 0 60px 0;}
+#PEEK.Alerts #peek-column-right img{margin: -10px 0 0 0;}
+#PEEK.Alerts #peek-center-column ul li{ line-height: 17px;}
+/************************************************************************************
+END ALERTS PAGE
+*************************************************************************************/
+
+/************************************************************************************
+FULLVIEW PAGE
+*************************************************************************************/
+#PEEK.fullview #peek-center-column #vertLine {margin: 0 0 40px 0;}
+#PEEK.fullview #peek-center-column ul li{ line-height: 17px;}
+/************************************************************************************
+END FULLVIEW PAGE
+*************************************************************************************/
+
+/************************************************************************************
+INTERNATIONAL TRADING PAGE
+*************************************************************************************/
+#PEEK.internationalTrading #peek-center-column .gray{padding-right: 10px;}
+#PEEK.internationalTrading #peek-center-column .gray p{font-size: 11px; line-height: 15px;}
+#PEEK.internationalTrading #peek-center-column ul li{ line-height: 20px;}
+/************************************************************************************
+INTERNATIONAL TRADING PAGE
+*************************************************************************************/
+
+
+/************************************************************************************
+STATEMENTS PAGE
+*************************************************************************************/
+#PEEK.statements #peek-center-column {width: 608px;}
+#PEEK.statements #peek-center-column h1{margin: 0 0 23px 0;}
+#PEEK.statements #peek-center-column ul li{ line-height: 17px;}
+/************************************************************************************
+END STATEMENTS PAGE
+*************************************************************************************/
+
+
+/************************************************************************************
+Contrib PAGE
+*************************************************************************************/
+#PEEK.Contrib #peek-center-column {width: 615px;}
+#PEEK.Contrib #peek-center-column  li{line-height: 18px;}
+#PEEK.Contrib #peek-center-column h1{margin: 0 0 23px 0;}
+#PEEK.Contrib #loginBoxGray {margin: 0 0 65px 0;}
+/************************************************************************************
+END Contrib PAGE
+*************************************************************************************/
+
+
+/************************************************************************************
+DEFAULT init page
+*************************************************************************************/
+#retailDefaultLogin #page-header{
+    margin-top: 1px;
+    padding: 0;
+}
+
+#retailDefaultLogin #page-header p{
+    margin-top: 38px;
+    margin-bottom: 0px;
+}
+
+
+#retailDefaultLogin #column-right{
+    height: auto;
+    float: left;
+    width: 360px;
+    margin: 4px 0 20px 10px;
+    border-left: 1px solid #CCC;
+    padding-left: 10px;
+}
+
+#retailDefaultLogin #column-right p{
+    line-height: 19px;
+}
+
+#retailDefaultLogin #column-left {
+    width: 320px;
+}
+#retailDefaultLogin #column-left p{
+    line-height: 15px;
+}
+#retailDefaultLogin #defaultConditions{width: 960px;}
+
+#retailDefaultLogin #other-sites p:nth-child(3n+4){
+    margin: 0;
+}
+
+
+#retailDefaultLogin #footer{
+    padding: 2px 0 0 0;
+    height: 80px;
+    color: #000000;
+    font-size: 12px;
+    font-family: Verdana,sans-serif;
+}
+
+#retailDefaultLogin #footer p:nth-child(3){
+    margin: 0 10px 15px 0;
+}
+
+#retailDefaultLogin #footer a {
+    font-size: 11px;
+}
+/************************************************************************************
+END DEFAULT init page
+*************************************************************************************/
+
+
+
+/************************************************************************************
+SPLIT page
+*************************************************************************************/
+#split #becomeMember p:nth-child(2n+2){
+    width: 350px;
+    margin-bottom: 0;
+
+}
+#split #column-left{
+    width: 340px;
+}
+/************************************************************************************
+END splpit page
+*************************************************************************************/
+
+
+
+
+/************************************************************************************
+TRIAL page
+*************************************************************************************/
+
+#trial #column-left {
+    width: 338px;
+}
+#trial #column-right h2:nth-child(2n+2){
+    margin: 20px 0 20px 0;
+}
+#trial #column-right p:nth-child(2n+3){
+    width: 340px;
+}
+
+#trial #column-right p:nth-child(2n+4){
+    margin: 0 0 20px 0;
+}
+
+/************************************************************************************
+END TRIAL page
+*************************************************************************************/
+
+
+
+/************************************************************************************
+TIMEOUT page
+*************************************************************************************/
+#timeoutAci #column-left {
+    width: 716px;
+}
+#timeoutAci #column-left .security-message p{
+    width: 100%;
+    margin: 0 0 30px 5px;
+    padding-top: 10px;
+    color: #666666;
+    font-size: 11px !important;
+    float: left;
+    border-top: 1px solid #DBDCDE;
+}
+
+#timeoutAci #column-left ol{
+    width: 300px;
+}
+#timeoutAci form li.error strong {
+    margin: 5px 0 5px 110px;
+}
+
+#timeoutAci #loginBoxRemMe #rememberMe input {
+    margin-left: 20px;
+    position:static !important;
+}
+
+#timeoutAci #loginBoxDefault #rememberMe, #timeoutAci #loginBoxRemMe #rememberMe {
+    width: 195px;
+}
+
+#timeoutAci #loginBoxRemMe {
+   margin-left: 0;
+}
+#timeoutAci #loginBoxRemMe .needHelp {
+    width: 230px;
+    margin: 8px 0;
+}
+
+#timeoutAci #loginBoxRemMe button {
+    margin: 0 0 0 108px;
+    padding: 0 4px;
+}
+
+#timeoutAci #useSavedId {
+    font-size: 12px;
+    margin: 0 0 8px 130px;
+}
+/************************************************************************************
+END TIMEOUT page
+*************************************************************************************/
+
+
+/************************************************************************************
+SIMPLE page
+*************************************************************************************/
+#simple .column-single ol{
+    width: 300px;
+}
+#simple form li.error strong {
+    margin: 0px 0 5px 100px;
+    padding: 0;
+    float: none;
+}
+/************************************************************************************
+END TIMEOUT page
+*************************************************************************************/
+
+
+
+/************************************************************************************
+PAS page
+*************************************************************************************/
+#pas #column-left {
+    width: 338px;
+}
+#pas #column-left ol li{
+   line-height: 17px;
+}
+/************************************************************************************
+END PAS page
+*************************************************************************************/
+
+
+/************************************************************************************
+EPREFILL page
+*************************************************************************************/
+#eprefill #loginBoxRemMe {
+    margin: 0 ;
+}
+
+#eprefill form ol li {
+    margin: 0 ;
+}
+
+#eprefill #loginBoxRemMe #rememberMe input{
+    margin-left: 110px;
+}
+
+#eprefill #loginBoxRemMe #rememberMe{
+    width: 195px;
+}
+
+#eprefill .needHelp{
+    width: 230px;
+    margin: 10px 0;
+}
+
+#eprefill #loginBoxRemMe button {
+    margin: 0 0 10px 107px;
+}
+
+#eprefill #loginBoxRemMe input[type="text"], input[type="password"]{
+    height: 15px;
+}
+
+#eprefill form li.error strong {
+    margin: 5px 0 0px 110px;
+}
+/************************************************************************************
+END EPREFILL page
+*************************************************************************************/
+
+/************************************************************************************
+END TIMEOUT page
+*************************************************************************************/
+/***********************************************Upgrade******************************/
+#warning-yellow-box{
+    background: url("./warning_msg_icon.gif") no-repeat scroll 10px 10px transparent;
+    border: 1px solid #F0D202;
+    line-height: 1.5em;
+    margin:0 0 15px 10px;
+    width:100%;
+    padding: 7px 10px 0px 30px;
+    float:left;
+}

@@ -1,0 +1,20 @@
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+
+#RewriteRule ^chatsss$ chat.php [L]
+
+
+#RewriteBase /rumahta/m/
+#RewriteCond %{REQUEST_URI} ^system.*
+#RewriteRule ^(.*)$ /index.php/$1 [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L]
+#</IfModule>
+
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+</IfModule>

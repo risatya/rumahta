@@ -1,0 +1,58 @@
+#facebox .b {
+  background:url(../img/facebox/b.png);
+}
+#facebox .tl {
+  background:url(../img/facebox/tl.png);
+}
+#facebox .tr {
+  background:url(../img/facebox/tr.png);
+}
+#facebox .bl {
+  background:url(../img/facebox/bl.png);
+}
+#facebox .br {
+  background:url(../img/facebox/br.png);
+}
+#facebox {
+  position: absolute;
+  width: 100%;
+  margin-top : 60px;
+  left: 0;
+  z-index: 100;
+  text-align: left;
+}
+#facebox .popup {
+  position: relative;
+}
+#facebox table {
+  margin: auto;
+  border-collapse: collapse;
+}
+#facebox .body {
+  padding : 0px 0px 10px 0px;
+  background: #fff;
+  min-height : 300px;
+  min-width : 100px;
+}
+#facebox .loading {
+  text-align: center;
+}
+#facebox .img {
+  text-align: center;
+}
+#facebox img {
+  border: 0;
+}
+#facebox .footer {
+  border-top: 1px solid #DDDDDD;
+  padding-top: 5px;
+  margin-top: 10px;
+  margin-right : 10px;
+  text-align: right;
+}
+#facebox .tl, #facebox .tr, #facebox .bl, #facebox .br {
+  height: 10px;
+  width: 10px;
+  overflow: hidden;
+  padding: 0;
+}

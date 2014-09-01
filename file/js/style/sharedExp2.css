@@ -1,0 +1,959 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+		font-family:arial, helvetica, sans-serif !important;
+		font-size: 100%;
+}
+
+body,
+textarea,
+select {
+ font-family:Arial, Helvetica, sans-serif !important;
+}
+
+.ofxBlack {
+	color:#000000 !important;
+}
+
+.ofxNormal {
+font-weight:normal !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal
+}
+
+h2
+{
+	margin: 0;
+	font-size: 17px;
+}
+
+.ofTextBlock h2 {
+	color:#3F8800;
+	font:bold 145% Arial,sans-serif;
+	padding-bottom:2px;
+}
+
+.ofTextBlock h3 {
+	font-weight: bold;
+	font-size: 125%;
+	font-family: Arial;
+	padding-bottom: 2px;
+	color: #333
+}
+
+h3.ofxH3AsTextAlt1 {font-size:12px !important; font-weight:normal !important}
+
+.ofHeading {
+	margin-bottom: 2px;
+	font-size: 75%;
+	position: relative;
+	height: 1%;
+	overflow: hidden
+}
+
+.ofHeading h1,
+.ofHeading h2,
+.ofHeading h3,
+.ofHeading h4 {
+	width: 70%;
+	display: inline;
+	font-weight: bold;
+	font-size: 100%
+}
+
+.ofHeading.ofHeadingOverview ul {
+	margin-bottom:3px;
+}
+
+.ofHeading ul {
+	bottom:0;
+	position:absolute;
+	right:0;
+}
+
+.ofHeading li.ofLastChild {
+	background-image:none;
+	margin-right:0;
+	padding-right:0;
+}
+
+.ofHeading li {
+	background:url(".//pipe.gif") no-repeat scroll right 3px transparent;
+	display:inline;
+	font-size:90%;
+	margin-right:8px;
+	padding-right:9px;
+}
+
+.ofxTextAncillaryAlt1 {font-size:95%}
+
+.ofxTextAlignLeft {
+	text-align:left !important;
+}
+
+.ofxLeftAlignedLabel {
+	float: left !important;
+	padding-top: 4px !important;
+}
+
+.ofxLeftAlignedLabel label {
+	float: left !important;
+}
+
+.ofHeading.ofHeadingOverview h1 {
+	font: normal x-large arial
+}
+
+.ofTextBlock .ofxTextAncillaryH3 {font-size:75%;color:#666}
+.ofTextBlock.ofxTextAncillaryGray {color:#666}
+.ofTextBlock.ofxTextAncillaryGray h3.ofxTextAncillaryH3 {font-size:95% !important;color:#666 !important}
+
+.ofContainer .ofEntryForm table tr td .ofContainer.ofMsg.ofNote2.ofxNote2AltH3 h3 {
+	font-size:95%;
+}
+
+.ofMsg.ofxSmallerIcon.ofError .ofLeftIcon {background-image: url(.//error.gif);background-position:1px 2px;}
+
+.ofMsg .ofLeftIcon {
+        background-image:url(.//error_msg_icon.gif);
+        background-repeat:no-repeat !important;
+        background-position:1px 4px;
+        padding-left:24px;
+        padding-bottom:3px;
+        padding-top: 1px
+}
+
+.ofMsg p {
+	color:#000 !important;
+	display:inline;
+	font-size: 100% !important;
+	line-height: 1.5em !important;
+}
+
+.ofMsg h2 {
+	color:#000 !important;
+	font-size:100% !important;
+	display:inline
+}
+.ofNote .ofLeftIcon,
+.ofNote2 .ofLeftIcon {
+        background-image:url(.//note_msg_icon.gif);
+}
+.ofContainer.ofAlt4Border.ofMsg .ofLeftIcon {
+        background-position:8px 9px !important;
+        padding:6px 6px 6px 31px !important
+}
+
+.ofNote,
+.ofNote2 {
+        border-color:#6289a9
+}
+
+.ofMsgLine h2 {
+        font-weight:bold;
+        font-family:Verdana, Arial, Helvetica, sans-serif;
+        margin-right:4px
+}
+.ofAlt4Border {
+	border: solid 1px #666
+}
+.ofContainerSmall .ofEntryForm table tr td .ofContainerSmall.ofMsg.ofNote2.ofxNote2AltH3 h3 {
+	font-size:95%;
+}
+
+a {
+	font-size: 12px !important;
+	color: #0F57C2 !important;
+	text-decoration: none !important;
+}
+
+a:hover {
+	text-decoration: underline;
+	color:#0F57C2;
+}
+
+a:active,
+a:focus {
+	text-decoration: underline;
+	color:#E74600 !important;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show
+}
+
+td, th {
+	vertical-align: top
+}
+
+fieldset, img {
+	border: 0
+}
+
+ol, ul {
+	list-style: none
+}
+
+caption, th {
+	text-align: left
+}
+
+div#contentContainer
+{
+	width: 965px;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-bottom: 30px;
+}
+
+.ofHeaderFooterWidth
+{
+	width: 995px;
+}
+
+/*Start classes used to override default vertical spacing of components */
+.ofAltPageLevelSpacing1 {
+	margin-bottom:0 !important;
+}
+
+.ofAltPageLevelSpacing2 {
+	margin-bottom:8px !important;
+}
+
+.ofAltPageLevelSpacing3 {
+	margin-bottom:12px !important;
+}
+
+.ofAltPageLevelSpacing5 {
+	margin-bottom:20px !important;
+}
+
+.ofGridWidth3 {width:179px}
+.ofGridWidth9 {width: 569px}
+.ofGridWidth10 {width: 634px}
+.ofGridWidth11 {width: 699px}
+.ofGridWidth12 {width: 764px}
+.ofGridWidth15 {width: 959px}
+
+.ofGridWidth9Col1 {width: 553px}
+
+.ofxPaddingTop3 {padding-top:3px !important}
+
+.ofxPaddingBottom8 {padding-bottom:8px !important}
+
+.ofxMarginLeft75 {
+	margin-left:75px !important;
+}
+
+.ofxMarginLeft45 {
+	margin-left:45px !important;
+}
+
+.ofxMarginRightConfirmPrint {
+	padding-right:354px !important;
+}
+
+.ofxMarginRight16 {
+	padding-right:16px !important;
+}
+
+.ofxMarginTop9 {
+	margin-top:9px !important;
+}
+.ofxMarginTop20 {
+	margin-top:20px !important;
+}
+
+.spacing-div_7X0 {
+	padding:7px 0 0;
+}
+
+.ofReg {float: left; margin-right: 16px}
+
+.ofRegNav {height:auto;padding-top: 8px}
+
+.ofRegPageTitle {margin-bottom: 14px; margin-right: 0; margin-top: 21px}
+.ofRegContent {margin-left: 16px}
+.ofRegFooter {clear: left; padding-top: 60px}
+
+
+
+div.lockIcon
+{
+	float: left;
+	margin-top: 3px;
+	margin-left: 3px;
+	width: 15px;
+	height: 15px;
+	background-image: url('./15_15_lock.png');
+	background-repeat: no-repeat;
+}
+
+div.helpIcon
+{
+	cursor: pointer;
+	margin-top: 0px;
+	margin-left: 5px;
+	width: 11px;
+	height: 11px;
+	background-image: url('.//11_11_question1.gif');
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+}
+
+div.popupIcon
+{
+	cursor: pointer;
+	margin-top: 1px;
+	margin-left: 5px;
+	width: 11px;
+	height: 11px;
+	background-image: url('.//popup.gif');
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+}
+
+div.bulletIcon
+{
+	margin-top: 2px;
+	margin-right: 5px;
+	float: left;
+	width: 11px;
+	height: 11px;
+	background-image: url('./11_11_bullet_b.gif');
+	background-repeat: no-repeat;
+}
+
+td.infoCell
+{
+	padding-top: 8px;
+}
+
+.ofEntryForm.ofDataDisplay th, .ofEntryForm.ofDataDisplay td {
+	padding-bottom:7px;
+	padding-top:0;
+}
+
+.ofEntryForm.ofDataDisplay tr.ofLastChild td, .ofEntryForm.ofDataDisplay tr.ofLastChild th {
+	padding-bottom:0;
+	padding-top:0;
+}
+
+.ofEntryForm th {
+	padding-bottom:11px;
+	padding-right:10px;
+	padding-top:3px;
+	text-align:right;
+	vertical-align: top;
+}
+
+.ofEntryForm tr.ofLastChild td, .ofEntryForm tr.ofLastChild th {
+	padding-bottom:0;
+}
+
+.ofEntryForm.ofDataDisplay th, .ofEntryForm.ofDataDisplay td {
+	padding-bottom:7px;
+	padding-top:0;
+}
+
+input, textarea {
+	padding:1px;
+}
+
+.ofEntryForm {
+	font-size: 75%
+}
+
+.ofEntryForm .ofTextBlock {font-size:95%}
+
+.ofEntryForm tr.ofLastChild td {
+	padding-bottom: 0;
+	vertical-align: top;
+}
+
+.ofEntryForm tr.ofLastChild th {
+	padding-top: 8px;
+	padding-bottom: 14px !important;
+	vertical-align: top;
+}
+
+.ofEntryForm .ofEntryForm {margin-top: 10px; font-size:100%}
+.ofEntryForm .ofEntryFormAnswer {margin-top: 0px; font-size:100%}
+
+.ofEntryForm .ofEntryForm th {padding-bottom:6px !important}
+.ofEntryForm .ofEntryForm td {padding-bottom:0 !important}
+.ofEntryForm .ofEntryFormAnswer th {padding-bottom:6px !important} 
+.ofEntryForm .ofEntryFormAnswer td {padding-bottom:0 !important} 
+.ofEntryFormAnswer.ofxLabelAlt1 table tr th label {
+	color:#000 !important;
+	font-weight: normal;
+	line-height: 1;
+	font-size: 12px;
+	display: block;
+	float: right;
+}
+
+.ofAnswer th {padding-top:11px !important}
+.ofAnswer td {padding-top:4px !important}
+
+.ofEntryForm.ofxLabelAlt1 table tr th label {
+	color:#000 !important;
+	font-weight: normal;
+	line-height: 1;
+	font-size: 12px;
+	display: block;
+	float: right;
+}
+
+.ofEntryForm.ofButtons {
+	margin-top: 0;
+	text-align: center;
+}
+
+.ofEntryForm th label,
+.ofLabel,
+.ofEntryForm.ofDataDisplay th {
+	font-weight: bold;
+	color: #666 /* @colorcode=D2@ */
+}
+
+.ofEntryForm select,
+.ofEntryForm input,
+.ofEntryForm textarea {
+	font-family: arial, helvetica, sans-serif !important;
+	font-size: 12px;
+}
+
+input.submitButton
+{
+	margin-top: 20px;
+}
+
+.inputRow label
+{
+	padding: 0 0 0 21px !important;
+	color:#000000 !important;
+	display:block;
+	float:left;
+	font-size:12px;
+	font-weight:normal;
+	line-height:1;
+	white-space: nowrap;
+}
+
+.inputRow input, .inputRow select
+{
+	border: 1px solid #b0b0b0;
+	padding: 2px 3px 3px;
+	margin: 3px 0;
+}
+
+.inputRow select
+{
+	padding: 1px 2px 2px;
+}
+
+.inputRow th
+{
+	padding-top:10px;
+	vertical-align:top;
+}
+
+.errorInputRow input, .errorInputRow select
+{
+    border-color: #CC0000 !important;
+}
+
+.errorInputRow th label
+{
+	background:url(".//form-ajax.png") no-repeat scroll 0% -3px transparent
+}
+
+.errorInputRow div label
+{
+	background:url(".//form-ajax.png") no-repeat scroll 0% -3px transparent
+}
+
+div.errorMessage
+{
+	font-size: 12px;
+	color: #CC0000;
+	font-weight: normal;
+	margin-top: 4px;
+	margin-bottom: 6px;
+	min-height: 18px;
+}
+
+div.aciErrorMessage
+{
+  font-family: arial,helvetica,sans-serif;
+	font-size: 12px;
+	color: #CC0000;
+	font-weight: normal;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+div.forcepsw-msg {padding:12px 8px 7px 39px; margin:10px 4px 20px 10px; background:url(.//error_msg_icon.gif) no-repeat; border:1px solid #CC0000;  background-color:#EFEFEF; background-position:16px 13px;}
+div.forcepsw-msg p {color:#CC0000; font-size: 12px; padding:0px 0px 0px 0px!important; margin:0px 0px 0px 0px!important;}
+div.forcepsw-msg p label{font-weight:bold;}
+div.forcepsw-msg ul {padding:9px 0px 0px 1px;}
+div.forcepsw-msg ul li{color:#000000; font-weight:normal; font-size:12px;padding:0px 0px 8px 0px;}
+
+.error-msg.pin-error{margin-top:3px;}
+div.aciGoodMessage
+{
+  font-family: arial,helvetica,sans-serif;
+  font-size: 12px;
+	color: #408800;
+	font-weight: normal;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+div.aciErrorMessageInDiv
+{
+  font-family: arial,helvetica,sans-serif;
+	font-size: 12px;
+	color: #CC0000;
+	font-weight: normal;
+	margin-top: -13px;
+	margin-bottom: 15px;
+  margin-left:250px;
+}
+
+div.aciGoodMessageInDiv
+{
+  font-family: arial,helvetica,sans-serif;
+  font-size: 12px;
+	color: #408800;
+	font-weight: normal;
+	margin-top: -13px;
+	margin-bottom: 15px;
+  margin-left:250px;
+}
+
+div.sqaGoodMessage
+{
+  font-family: arial,helvetica,sans-serif;
+  font-size: 17px;
+	color: #408800;
+	font-weight: bold;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.ofToolTipContainer {
+left:-3000px;
+min-height:100px;
+position:absolute;
+top:-3000px;
+width:200px;
+z-index:99999;
+}
+
+.ofToolTipContainer .ofTopArrow {
+display:block;
+left:20px;
+position:absolute;
+}
+
+.ofBubbleWrapper {
+background-color:#FFFfFF;
+border:1px solid #000000;
+margin-top:17px;
+}
+
+.ofBubbleText {
+	padding: 17px 10px 10px;
+}
+
+.close {
+	float:right;
+	z-index:100;
+}
+
+.close img {
+	margin:5px 5px 0 0;
+	vertical-align:middle;
+	border: none;
+}
+
+.close a {
+	font-size: 13px;
+}
+
+.ofBubbleText ul {
+	margin: 0;
+	padding: 0 0 0 15px;
+}
+
+.errorBox {
+	padding: 7px 10px 12px 30px;
+	margin-top: 10px;
+	margin-bottom: 17px;
+	border: 1px solid #cc0000;
+	font-size: 14px;
+	line-height: 1.5em;
+	color: #cc0000;
+	min-width: 225px;
+	width: 700px;
+	background: url('.//error_msg_icon.gif') no-repeat scroll 10px 10px transparent;
+}
+
+.bluebulletlist ul {
+	list-style-type:none;
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+	padding-top: 12px !important;
+}
+
+.bluebulletlist ul li {
+	background-image:url(".//11_11_bullet_b.gif");
+	background-position:0 2px;
+	background-repeat:no-repeat;
+	font-size: 12px;
+	padding:0 0 10px 17px;
+}
+
+.bluebulletlist span {
+	display: block;
+}
+
+.bluebulletlist a {
+	line-height: 1em;
+}
+
+p.cancelLink {
+	background:url(".//close_small_icon.gif") no-repeat scroll left 2px transparent;
+	padding-left:23px;
+}
+
+/* progress meter */
+.ofxProgressMeter {margin: 0 0 24px 0;}
+.ofxProgressMeter ol {padding: 0;margin: 0;}
+.ofxProgressMeter ol li {font: normal 12px arial !important; display:inline !important; background: url(.//pipe3.gif); background-repeat: no-repeat; background-position: 9px 2px; list-style: none; padding: 0 3px 0 14px; margin: 0 0 0 0;}
+.ofxProgressMeter ol li.ofFirstChild {padding-left:0px;background:none;}
+.ofxProgressMeter ol li.ofxCompletedStep span.ofxStep {background: url(.//progressCheck.gif);background-repeat: no-repeat;background-position: 1px 3px;padding-left:15px;padding-right:4px;color:#888;}
+.ofxProgressMeter ol li.ofxCurrentStep span.ofxStep {background: url(.//progressArrow.gif);background-repeat: no-repeat;background-position: 1px 3px;padding-left:15px;padding-right:4px;color:#387800;font-weight:bold !important}
+.ofxProgressMeter ol li.ofxNotStartedStep span.ofxStep {background: url(.//clear.gif);background-repeat: no-repeat;background-position: 1px 3px;padding-left:15px;padding-right:4px;color:#888;}
+.ofxProgressMeter ol li a {color:#0F57C2;text-decoration:none}
+.ofxProgressMeter ol li a:hover {text-decoration:underline}
+.ofxProgressMeter ol li a:active {text-decoration:underline}
+
+.ofContainer.ofxAlt2BorderMedium {border-width: 2px 0 2px 0 !important;border-style: solid !important;border-color:#D1DAE3 !important}
+.ofContainerSmall.ofxAlt2BorderMedium {border-width: 2px 0 2px 0 !important;border-style: solid !important;border-color:#D1DAE3 !important}
+
+#welcome
+{
+	background-color: #fff;
+	display: none;
+	padding: 15px;
+	width: 343px;
+	border: 1px solid #7f9db9;
+}
+
+#welcome p.headerText
+{
+	color: #3f8700;
+	font-size: 16px;
+	margin-left: 0;
+	text-align: left;
+	margin-top: 0;
+	font-weight: bold;
+}
+
+#welcome p
+{
+	color: #000;
+	font-size: 12px;
+	line-height: 18px;
+	margin-left: 5px;
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+#welcome div.hRule
+{
+	background-color: #dbdcde;
+	height: 1px;
+	margin-bottom: 2px;
+	width: 100%;
+	font-size: 1px;
+}
+
+#welcome p.smallText
+{
+	color: #666;
+	font-size: 70%;
+	margin-left: 20px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: left;
+	width: 353px;
+	line-height: 1.6em;
+}
+
+.bClose
+{
+	cursor: pointer;
+	font-weight: bold;
+	/*position: absolute;
+	right: 11px;
+	top: 6px; */
+	float: right;
+	margin-right: -3px;
+	margin-top: -3px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+}
+
+.ofClear {
+	clear: both;
+	display: inline-block /* necessary to clear floats in IE7 */
+}
+
+.ofLastChild {
+	margin-bottom: 0 !important
+}
+
+.ofPad1 {
+	padding: 8px 8px 5px 8px
+}
+
+.ofOffScreen {
+	position: absolute;
+	left: -5000px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden
+}
+
+.ofContainer,
+.ofTextBlock,
+.ofFootnote,
+.ofTable,
+.ofTab,
+.ofEntryForm,
+.ofAccordionPanel,
+.ofToc {
+	margin-bottom: 24px
+}
+
+.ofContainerSmall {
+	margin-bottom: 20px
+}
+
+.ofTextBlock {
+	font-size:75%;
+}
+
+.ofTextBlock.ofCallout h3 {
+	color:#000000;
+	font-size:inherit;
+}
+
+.ofTextBlock.ofTextAncillary {
+	font-size:70%;
+}
+
+.ofTextBlock.ofTextAncillary h3 {
+	font-size:100%;
+}
+
+.ofTextBlock.ofTextAncillary p, .ofTextBlock.ofTextAncillary ol li, .ofTextBlock.ofTextAncillary ul li, .ofTextBlock.ofTextAncillary h3, .ofTextBlock.ofTextAncillary h4, .ofTextBlock.ofTextAncillary select, .ofTextBlock.ofTextAncillary input, .ofTextBlock.ofTextAncillary textarea {
+	line-height:1.4em;
+}
+
+.ofTextBlock.ofCallout p, .ofTextBlock.ofCallout ol li, .ofTextBlock.ofCallout ul li {
+	line-height:1.5em !important;
+}
+
+.ofTextBlock h3.ofFirstChild {
+	margin-top:-2px;
+}
+
+.ofTextBlock .ofLastChild {
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important
+}
+
+.ofTextBlock a {
+	color: #0F57C2 !important;
+}
+
+.ofTextBlock a:visited {
+	color: #64406c
+}
+
+.ofTextBlock p {
+	line-height: 1.5em
+}
+
+.ofTextBlock p + p {
+	margin-top:11px;
+}
+
+.ofTextBlock ul  {
+	margin-top: -1px;
+	padding-bottom: 0 !important
+}
+
+.ofTextBlock ul li {
+	line-height: 1.5em;
+	padding-left: 11px;
+	margin: 0 0 5px 0;
+	background-image: url(./bullet_square_c2.gif);
+	background-repeat: no-repeat;
+	background-position: 0 8px !important
+}
+
+.ofTextBlock.ofAltBullet1 ul li,
+.ofTextBlock ul.ofAltBullet1 li {
+	background-image: url(./greenbulsq.gif)
+}
+
+.ofTextBlock .ofIcon {
+	padding-left: 23px;
+	background: transparent url(./close_small_icon.gif) no-repeat left 2px;
+}
+
+/* new bullet style */
+.ofTextBlock ul.ofxAltBullet3  {margin-top: -1px !important;padding-bottom: 0 !important}
+.ofTextBlock ul.ofxAltBullet3 li {line-height: 1.5em !important;padding-left: 19px !important; margin: 0 0 5px 0 !important;background-image: url(./11_11_bullet_b.gif) !important;background-repeat: no-repeat !important;background-position: 0 3px !important}
+.ofTextBlock ul li.ofxNoBulletLI {padding-left:0px !important;background:none !important;}
+
+
+.ofFooter {
+	margin-left: 16px;
+	color: #666;
+	text-align: right;
+	font-size: 70%;
+	line-height: 1.3em;
+	padding: 4px 8px 0 16px;
+	border-top: 1px solid #666
+}
+
+.ofFooter .ofFooterLogo {
+	float: left;
+	margin-top: 3px;
+	margin-top: 4px
+}
+
+.ofFooter.ofSmartMove {
+	color: #666;
+	margin-left: 0;
+	border-top-color: #CCC; /* @colorcode=D8@ */
+	background-color: #EEE; /* @colorcode=D10@ */
+	height: 80px
+}
+
+.ofFooter.ofxFooterAlt2 {padding: 5px 0 0 0; line-height: 1.6em;}
+.ofFooter.ofxFooterAlt2 ul {padding-top:18px; padding-bottom:19px;}
+.ofFooter.ofxFooterAlt2 li {display: inline;background: transparent url(./pipe.gif) no-repeat 0 3px; padding-left:6px;padding-right:1px;}
+.ofFooter.ofxFooterAlt2 li.ofFirstChild {background-image:none}
+.ofFooter.ofxFooterAlt2 li.ofLastChild {padding-right: 0;}
+.ofFooter.ofxFooterAlt2.ofAuxMsg {border-top: none;margin-top: 26px}
+.ofFooter.ofxFooterAlt2 .ofAuxMsgTxt {text-align: left;font: normal 11px arial,helvetica,sans-serif; color:#000000; padding-bottom:7px; margin-bottom:5px; border-bottom: 1px solid #666666;}
+.ofxFooterAlt2.ofxFooterRetailAlt1 img {margin-left:16px !important}
+.ofxFooterAlt2.ofxFooterRetailAlt1 {padding-right:16px !important}
+
+.ofNavless {
+	height: 1%; /* necessary for IE 6 + 7 */
+	margin-top: -8px
+}
+
+.ofNavless .ofWrapper {
+	padding-right: 16px;
+	padding-bottom: 5px;
+	overflow: hidden /* required for Opera 9 */
+}
+
+.ofNavless .ofWrapperNB {
+	overflow:hidden;
+	padding-bottom:9px;
+	padding-right:16px;
+}
+
+.ofNavless.ofAlt1 .ofWrapper {
+	border-bottom-color: #068037;
+    background-image: url(./navless-gradient.gif);
+	background-repeat: repeat-x;
+	padding-left: 12px;
+    height: 36px;
+}
+
+.ofNavless img {
+	float: left;
+	margin-top: 7px
+}
+
+.ofxBlackBottomLine {
+	background-color:#FFFFFF !important;
+	border-bottom:2px solid #000000 !important;
+	margin-left:16px !important;
+}
+
+.ofContainer.ofxBorderColorAlt1 {
+	border-color:#1D6489;
+}
+
+.ofContainerSmall.ofxBorderColorAlt1 {
+	border-color:#1D6489;
+}
+
+.ofAlt2Border {
+	border-bottom:1px solid #666666;
+	border-top:1px solid #666666;
+}
+
+.floatRight {
+	float: right !important;
+}
+
+img.ofxImgPaddingTop2 {padding-top:2px !important}
+img.ofxImgMarginBottomMinus2 {margin-bottom:-2px !important}
+img.ofxImgMarginLeft6 {margin-left:6px !important}
+
+/* tweak some jQueryUI css parameters for modal popups */
+.ui-widget-overlay {
+	background: repeat-x scroll 50% 50% black !important;
+	opacity: 0.2 !important;
+}
+
+.ui-widget-overlay {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.ui-resizable-handle {
+	display: none;
+}
+
+.ui-dialog-titlebar {
+	display: none;
+}
