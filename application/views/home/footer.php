@@ -34,7 +34,7 @@
 				<a href="#">Testimonial</a><br/>
 				<a href="#">Berita terbaru</a><br/>
 				<?php echo anchor("page/page_detail/3/kontak","Kontak kami"); ?><br/>
-				Copyright &copy; 2012 | Rumahta.com | Design & developed by <a href="http://binary-project.com" target="_blank">Binary Project</a>
+				Copyright &copy; 2012 | Rumahta.com
 			</div>
 		</div>
 	</div>

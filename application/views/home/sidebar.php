@@ -29,7 +29,7 @@
 						<div id="calc_col_4">
 							Angsuran per bulan: <br/>
 							<input type="text" class="span2" readonly="yes" id="hasil" name="hasil" />
-							<small style="font-size:12px;">*Kalkulasi diatas hanya simulasi / estimasi biaya.</small>
+							<small style="font-size:12px;"><br/>*Kalkulasi diatas hanya simulasi / estimasi biaya.</small>
 						</div>
 					</form>
 				</div>
