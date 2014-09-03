@@ -57,7 +57,7 @@
 				<div id="listing_free_wrapper">
 					<?php 
 					$z = 0;
-					foreach($free_listing as $item): 
+					foreach($premium_listing as $item): 
 					?>
 					<div id="listing_free_list">
 						<div id="free_photo">
