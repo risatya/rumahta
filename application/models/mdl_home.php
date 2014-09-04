@@ -94,7 +94,7 @@ Class Mdl_home extends CI_Model{
 		$this->db->where('expired_date >=',$now);
 		$this->db->where('status_paket !=',1);
 		$this->db->order_by('id_listing_member','desc');
-		$this->db->limit(6, 0);
+		$this->db->limit(12, 0);
 		$this->db->join('tbl_listing', 'tbl_listing_member.id_listing = tbl_listing.id_listing', 'left');
 		$this->db->join('tbl_kategori', 'tbl_listing_member.id_kategori = tbl_kategori.id_kategori', 'left');
 		$this->db->join('tbl_kab_indo', 'tbl_listing_member.id_kabupaten = tbl_kab_indo.id_kabupaten', 'left');
@@ -108,7 +108,7 @@ Class Mdl_home extends CI_Model{
 		$this->db->where('expired_date >=',$now);
 		$this->db->where('status_paket',1);
 		$this->db->order_by('id_listing_member','desc');
-		$this->db->limit(6, 0);
+		$this->db->limit(12, 0);
 		$this->db->join('tbl_listing', 'tbl_listing_member.id_listing = tbl_listing.id_listing', 'left');
 		$this->db->join('tbl_kategori', 'tbl_listing_member.id_kategori = tbl_kategori.id_kategori', 'left');
 		$this->db->join('tbl_kab_indo', 'tbl_listing_member.id_kabupaten = tbl_kab_indo.id_kabupaten', 'left');

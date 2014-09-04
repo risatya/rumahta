@@ -3,18 +3,17 @@
 <head>
 
 	<title><?= ($page_title != null ? $page_title : "Rumahta.com | rumah dijual di makassar, jual tanah makassar"); ?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<meta name="keywords" content="rumah dijual di makassar, jual tanah makassar,Cari rumah, kostan, ruko, rukan, apartemen, tanah, gudang, pabrik, kios, di Makassar, Menjual, Membeli dan menyewa" />
 	<meta name="Title" content="<?= ($page_title != null ? $page_title : "Rumahta.com | Jual, Beli, Sewa, Rumah, Kostan, Tanah, Tempat Usaha di Sulawesi Selatan"); ?>" />
 	<meta name="description" content="<?=($page_desc != null ? $page_desc : "Cari rumah, kostan, ruko, rukan, apartemen, tanah, gudang, pabrik, kios, di Makassar, Menjual, Membeli dan menyewa lihat infonya di Rumahta.com"); ?>"/>
-	<meta name="copyright" content="&copy; 2012 Binary Project"/>
 	<meta name="classification" content="General"/>
 	<meta name="rating" content="General"/>
 	<meta name="distribution" content="Global"/>
 	<meta name="robots" content="index, follow" />
 	<meta name="googlebot" content="index,follow" />
 	<meta name="msnbot" content="index,follow" />
-	<meta name="author" content="www.binary-project.com"/>
 	<link rel="shortcut icon" href="<?php echo base_url(); ?>file/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
 	<!-- Attach CSS File -->

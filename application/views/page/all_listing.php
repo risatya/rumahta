@@ -63,7 +63,7 @@
 				}
 				else{
 					?>
-					<div id="listing_free_wrapper">
+					<div id="listing_premium_wrapper">
 						<div id="listing_premium_list">
 						<?php
 							$str = "<span class='status'>".strtoupper($item->nama_kategori)."</span><span class='adv_name'>".(strlen($item->judul) > 50 ? substr($item->judul,0,47)."..." : $item->judul)."</span>";
@@ -163,7 +163,10 @@
 					if($freecount == 0){
 						?>
 						</div>
-						<div id="listing_free_wrapper">
+						<div id="listing_premium_wrapper">
+						<div id="listing_premium_title">
+						<span>Listing Premium</span>
+					</div>
 						<?php
 					}
 					?>
