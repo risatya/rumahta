@@ -278,9 +278,11 @@ ul#nav {
 /*---------------------------------------------------------*/
 #top_banner{
 	float : left;
-	width : 562px;
-	height : 165px;
+	width: 715px;
+	height: 215px;
 	margin : -5px 0 0 0;
+	background: #CCC;
+	margin-bottom: 25px;
 }
 #maskot{
 	position : relative;
@@ -1506,4 +1508,86 @@ span.photo_marker2{
 /****************************************************************************************/
 fieldset.user_listing{
 	width : 670px;
+}
+
+
+/* VIEWPORT < 960px */
+
+@media only screen and (max-width: 960px){
+	#header, #topmenu_wrapper, #logo, #left_wrapper, #right_wrapper, #loginform, #topmenu_left, #topmenu, #nav, #topmenu_right, #footer, #container{ width: 768px; }, #bottom_banner, #bottom_banner2, #top_banner
+	{
+		left: 0;
+	}
+	
+	#logo{
+		display: block;
+		text-indent: -999999px;
+		width: 442px;
+		height: 90px;
+		float: left;
+	}
+	#header{
+		width: 100%;
+		height: 100px;
+}
+	#loginform{
+		text-align:center;
+		width: 100%;
+	}
+	#loginform p{
+		text-align:center;
+	}
+	#loginform form{
+		margin: 0 auto;
+	}
+	#topmenu_wrapper{
+	margin: 0 auto;
+	width: 1130px;
+	position: relative;
+	z-index: 1000;
+	}
+	
+	#right_wrapper{
+		float: none;
+		width: 850px;
+		margin-bottom: 30px;
+	}
+	#kalkulator_wrapper{
+		display:none;
+	}
+	#side_banner{
+		float: left;
+		width: 130px;
+		height: 130px;
+		margin: 20px 0 0 20px;
+	}
+	#bottom_banner{
+
+		width: 35%;
+		margin: 20px 0 0 20px;
+	}
+	#bottom_banner2{
+
+		width: 35%;
+		margin: 20px 0 0 20px;
+	}
+	#top_banner{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	#twitter{
+		margin-left: 18px;
+	}
+	#blog{
+		clear: both;
+	}
+	#links{
+		width: auto;
+		margin-bottom: 30px;
+	}
+
+	#links ul li{
+		float: left;
+		margin-right: 30px;
+	}
 }
