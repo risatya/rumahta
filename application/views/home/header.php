@@ -28,7 +28,8 @@
 </head>
 <body>
 	<div id="header">
-		<div id="logo"></div>
+	<div class="row">
+		<div id="logo"><h1><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>file/img/logo.png"></a></h1></div>
 		<div id="loginform">
 			<p>
 				Belum punya akun ? <?php echo anchor("home/signup","Daftar Sekarang");?> | <?php echo anchor("home/forgot","Lupa Password");?>
@@ -42,4 +43,5 @@
 				<input type="submit" class="btn btn-inverse" value="&nbsp;&nbsp;Login&nbsp;&nbsp;" />
 			<?php echo form_close(); ?>
 		</div>
+	</div>
 	</div>

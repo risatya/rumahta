@@ -40,7 +40,7 @@
 						</ul>
 					 </li>
 					 <li>
-						<?php// echo anchor("statistik/index","<i class='icon-signal'></i>Statistik"); ?>
+
 						<?php echo anchor("page/page_detail/16/bantuan","<i class='icon-wrench'></i>Bantuan"); ?>
 					 </li>
 					 <li>

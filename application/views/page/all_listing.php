@@ -164,9 +164,7 @@
 						?>
 						</div>
 						<div id="listing_premium_wrapper">
-						<div id="listing_premium_title">
-						<span>Listing Premium</span>
-					</div>
+						
 						<?php
 					}
 					?>

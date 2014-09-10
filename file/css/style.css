@@ -1,3 +1,5 @@
+@import url("bootstrap.css");
+@import url("bootstrap.min.css");
 body{
 	margin : 0 auto;
 	width : 100%;
@@ -32,8 +34,10 @@ thead{
 	float : left;
 	width : 442px;
 	height : 90px;
-	background : url(../img/logo.png);
 	margin : 5px 0 0 10px;
+}
+#logo h1{
+	margin-bottom : 5px;
 }
 #loginform{
 	float : right;
@@ -533,6 +537,7 @@ span.kriteria:hover{
 	float : left;
 	width : 695px;
 	height : 155px;
+	padding-top: 10px;
 }
 #listing_premium_list2{
 	float : left;
@@ -934,7 +939,7 @@ p.listing_paging a:hover{
 /*----------------------------------------Berita terbaru---*/
 #news_wrapper{
 	float : left;
-	width: 478px;
+	width: 46.79%;
 	height : 230px;
 	background : #ffffff;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dcdcdc)); /* Safari 4+, Chrome */
@@ -1010,7 +1015,7 @@ b.judul{
 /*----------------------------------------Testimonial---*/
 #testi_wrapper{
 	float : left;
-	width: 478px;
+	width: 46.79%;
 	height : 230px;
 	background : #ffffff;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dcdcdc)); /* Safari 4+, Chrome */
@@ -1042,7 +1047,7 @@ b.judul{
 #testi_title span{
 	float : left;
 	font-family : verdana;
-	font-size : 14px;
+	font-size: 13px;
 	font-weight : bold;
 	text-transform : uppercase;
 	color : #fff;
@@ -1511,10 +1516,14 @@ fieldset.user_listing{
 }
 
 
+#navbar-header{
+	width:100%
+}
+
 /* VIEWPORT < 960px */
 
 @media only screen and (max-width: 960px){
-	#header, #topmenu_wrapper, #logo, #left_wrapper, #right_wrapper, #loginform, #topmenu_left, #topmenu, #nav, #topmenu_right, #footer, #container{ width: 768px; }, #bottom_banner, #bottom_banner2, #top_banner
+	#logo, #header, #topmenu_wrapper, #logo, #left_wrapper, #right_wrapper, #loginform, #topmenu_left, #topmenu, #nav, #topmenu_right, #footer, #container{ width: 768px; }, #bottom_banner, #bottom_banner2, #top_banner, #news_wrapper, #testi_wrapper
 	{
 		left: 0;
 	}
@@ -1566,24 +1575,83 @@ fieldset.user_listing{
 		width: 35%;
 		margin: 20px 0 0 20px;
 	}
+	 #bottom_banner img{
+		width: 100%;
+		height: 100%;
+	}
 	#bottom_banner2{
-
 		width: 35%;
 		margin: 20px 0 0 20px;
 	}
+	 #bottom_banner2 img{
+		width: 100%;
+		height: 100%;
+
+}
 	#top_banner{
 		width: 100%;
 		margin-bottom: 30px;
 	}
-	#twitter{
-		margin-left: 18px;
+	 #top_banner img{
+		width: 100%;
+		height: 100%;
+		
 	}
-	#blog{
-		clear: both;
+	#testimonial{
+		width: 35%;
 	}
-	#links{
+	#news_title{
+		width: 100%;
+	}
+	#news_wrapper{
+		width: 35%;
+		height: 230px;
+		margin: 20px 0 0 0px;
+		padding: 10px;
+
+	}
+	#news_title span {
+		float: left;
+		font-family: verdana;
+		font-size: 13px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 7px 0 0 15px;
+	}
+	#news_content_text img {
+		display:none;
+	}
+	#news_content_text p {
+		float: left;
+		width: 345px;
+		font-family: verdana;
+		font-size: 12px;
+		margin-top: -3px;
+		text-align: left;
+		margin: -60px 0 0 0px;
+	}
+	#testi_wrapper{
+		float: left;
+		width: 35%;
+		height: 230px;
+		margin: 20px 0 0 17px;
+		padding: 10px;
+	}
+	#testi_content_text p {
+	float: left;
+	width: 371px;
+	font-family: verdana;
+	font-size: 12px;
+	margin-top: -3px;
+	text-align: left;
+	margin: -6px 0 0 5px;
+	}
+	#testi_content_text img {
+	display:none;
+	}
+	#footer{
 		width: auto;
-		margin-bottom: 30px;
 	}
 
 	#links ul li{
@@ -1591,3 +1659,4 @@ fieldset.user_listing{
 		margin-right: 30px;
 	}
 }
+
