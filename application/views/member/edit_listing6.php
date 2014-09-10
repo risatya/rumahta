@@ -76,6 +76,13 @@
 								</div>
 							</div>
 							
+							<div class="control-group" id="kecamatan">
+								<label class="control-label"><b>Kecamatan:</b></label>
+								<div class="controls docs-input-sizes">
+									<input class="span3" type="text" name="kecamatan" value="<?php echo $item->kecamatan; ?>" />*<i><u><?php echo form_error('kecamatan'); ?></u></i>
+								</div>
+							</div>
+							
 							<div class="control-group" id="alamat">
 								<label class="control-label"><b>Alamat:</b></label>
 								<div class="controls docs-input-sizes">

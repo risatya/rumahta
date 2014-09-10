@@ -44,6 +44,7 @@
 								<span>HARGA : </span><?php echo "Rp. ".$item->harga; ?> <br/>
 								<span>KAB / KOTA : </span><?php echo ucfirst(strtolower($item->nama_kabupaten)); ?> <br/>
 								<span>ALAMAT : </span><?php echo $item->alamat; ?> <br/>
+								<span>KECAMATAN : </span><?php echo $item->kecamatan; ?> <br/>
 								<span>KONDISI : </span><?php echo $item->kondisi; ?> <br/>
 							</p>
 							

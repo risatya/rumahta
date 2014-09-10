@@ -1,7 +1,6 @@
 <?php if ( ! defined("BASEPATH")) exit("No direct script access allowed");
  
 class Picture{
-	
     function __construct(){
     }
 	public function createThumb($image_path, $width = 0, $height = 0) {
@@ -190,12 +189,10 @@ class Picture{
 		$fileinfo = pathinfo($image_path);
 		$new_image_path = $fileinfo['dirname'] . '/' . $fileinfo['filename'] .'_thumb'. '.' . $fileinfo['extension'];
 		$new_image_name = $fileinfo['filename'] . '.' . $fileinfo['extension'];
-		
 		//The first time the image is requested
 		//Or the original image is newer than our cache image
 		if ((! file_exists($new_image_path)) || filemtime($new_image_path) < filemtime($image_path)) {
 			$CI->load->library('image_lib');
-		   
 			//The original sizes
 			$original_size = getimagesize($image_path);
 			$original_width = $original_size[0];
@@ -221,7 +218,6 @@ class Picture{
 					$new_height = $requested_height;
 					$new_width = $new_height * $ratio;
 				}
-		   
 			}
 			else {
 				$new_height = $requested_height;
@@ -248,7 +244,6 @@ class Picture{
 			$CI->image_lib->initialize($config);
 			$CI->image_lib->resize();
 			$CI->image_lib->clear();
-		   
 			//Crop if both width and height are not zero
 			if (($width != 0) && ($height != 0)) {
 				$x_axis = floor(($new_width - $width) / 2);
@@ -267,6 +262,25 @@ class Picture{
 				$CI->image_lib->clear();
 			}
 		}
+		//MAKE WATERMARK
+			$CI->load->library('image_lib');		   
+			$config['source_image'] = $image_path;
+			$config['image_library'] = 'gd2';
+			$config['maintain_ratio'] = true;
+			$config['wm_type'] = 'overlay';
+			$config['wm_overlay_path'] = './file/img/watermarkrumahta.png';
+			$config['wm_vrt_offset'] = '-20';
+			$config['wm_padding'] = '20';
+			$config['wm_opacity'] = '10';
+			$config['wm_vrt_alignment'] = 'bottom';
+			$config['wm_hor_alignment'] = 'right';
+			$config['wm_hor_offset']='250';
+			$config['wm_vrt_offset']='175';
+			$CI->image_lib->initialize($config);
+			$CI->image_lib->watermark();
+			$CI->image_lib->clear();
+		//=========================
 		return $new_image_name;
 	}
+	
 }

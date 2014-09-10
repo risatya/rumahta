@@ -243,6 +243,12 @@
 									</select>*<i><small><?php echo form_error('kabupaten'); ?></small></i>
 								</div>
 							</div>
+							<div class="control-group" id="kabupaten">
+								<label class="control-label">Kecamatan:</label>
+								<div class="controls docs-input-sizes">
+									<input class="span3" type="text" name="kecamatan" value="<?php echo set_value('kecamatan'); ?>" />*<i><small><?php echo form_error('kecamatan'); ?></small></i>
+								</div>
+							</div>
 							
 							<div class="control-group" id="harga">
 								<label class="control-label">Harga:</label>

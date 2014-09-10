@@ -137,70 +137,71 @@ class Member_listing extends CI_Controller {
 				$this->pilih_paket();
 			}
 			else{
-				$this->load->library('form_validation');
-				$this->form_validation->set_rules('kategori','', 'htmlentities|strip_tags|trim|required|xss_clean');
-				$this->form_validation->set_rules('judul','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[100]|xss_clean');
-				$this->form_validation->set_rules('status','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('kabupaten','', 'htmlentities|strip_tags|trim|required|xss_clean|integer');
-				$this->form_validation->set_rules('kondisi','', 'htmlentities|strip_tags|trim|required|xss_clean|integer');
-				$this->form_validation->set_rules('harga','', 'htmlentities|strip_tags|trim|min_length[4]|max_length[25]|xss_clean');
-				$this->form_validation->set_rules('alamat','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[200]|xss_clean');
-				$this->form_validation->set_rules('kodepos','', 'htmlentities|strip_tags|trim|min_length[4]|max_length[20]|xss_clean');
-				$this->form_validation->set_rules('sertifikat','', 'htmlentities|strip_tags|trim|max_length[100]|xss_clean');
-				$this->form_validation->set_rules('mls','', 'htmlentities|strip_tags|trim|max_length[100]|xss_clean');
-				$this->form_validation->set_rules('keterangan','', 'htmlentities|strip_tags|trim|max_length[1000]|xss_clean');
-				$this->form_validation->set_rules('latitude','', 'htmlentities|strip_tags|trim|required|max_length[100]|xss_clean');
-				$this->form_validation->set_rules('longitude','', 'htmlentities|strip_tags|trim|required|max_length[100]|xss_clean');
-				$this->form_validation->set_rules('zoom_level','', 'htmlentities|strip_tags|trim|required|max_length[2]|xss_clean');
-				$this->form_validation->set_rules('show_map','', 'htmlentities|strip_tags|trim|required|max_length[3]|xss_clean|integer');
-				$this->form_validation->set_rules('penghuni','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('penghuni_mayoritas','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('with_owner','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('dekat_dgn','', 'htmlentities|strip_tags|trim|xss_clean|max_length[200]');
-				$this->form_validation->set_rules('jlantai','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('ktidur','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('kmandi','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('garage','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
-				$this->form_validation->set_rules('pembantu','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
-				$this->form_validation->set_rules('sumberair','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
-				$this->form_validation->set_rules('ltanah','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
-				$this->form_validation->set_rules('arah','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
-				$this->form_validation->set_rules('dlistrik','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
-				$this->form_validation->set_rules('lbangunan','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
-				$this->form_validation->set_rules('furniture','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('keamanan','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('banjir','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('univ','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('pasar','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('kendaraan','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('sekolah','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('toko','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('ac','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('lift','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('parkir','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('kantin','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('kmr_ac','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('lemari','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('meja','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('rakbuku','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('kipas','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('tvcable','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('shower','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('telkamar','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('tmptidur','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('lcd','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('mandidlm','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('dapur','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('catering','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('internet','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('rtamu','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('parkiran','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('jammalam','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('cctv','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('prt','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('olhraga','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				$this->form_validation->set_rules('cucisetrika','', 'htmlentities|strip_tags|trim|xss_clean|integer');
-				
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('kategori','', 'htmlentities|strip_tags|trim|required|xss_clean');
+			$this->form_validation->set_rules('judul','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[100]|xss_clean');
+			$this->form_validation->set_rules('status','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('kabupaten','', 'htmlentities|strip_tags|trim|required|xss_clean|integer');
+			$this->form_validation->set_rules('kondisi','', 'htmlentities|strip_tags|trim|required|xss_clean|integer');
+			$this->form_validation->set_rules('harga','', 'htmlentities|strip_tags|trim|min_length[4]|max_length[25]|xss_clean');
+			$this->form_validation->set_rules('alamat','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[200]|xss_clean');
+			$this->form_validation->set_rules('kecamatan','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[100]|xss_clean');
+			$this->form_validation->set_rules('kodepos','', 'htmlentities|strip_tags|trim|min_length[4]|max_length[20]|xss_clean');
+			$this->form_validation->set_rules('sertifikat','', 'htmlentities|strip_tags|trim|max_length[100]|xss_clean');
+			$this->form_validation->set_rules('mls','', 'htmlentities|strip_tags|trim|max_length[100]|xss_clean');
+			$this->form_validation->set_rules('keterangan','', 'htmlentities|strip_tags|trim|max_length[1000]|xss_clean');
+			$this->form_validation->set_rules('latitude','', 'htmlentities|strip_tags|trim|required|max_length[100]|xss_clean');
+			$this->form_validation->set_rules('longitude','', 'htmlentities|strip_tags|trim|required|max_length[100]|xss_clean');
+			$this->form_validation->set_rules('zoom_level','', 'htmlentities|strip_tags|trim|required|max_length[2]|xss_clean');
+			$this->form_validation->set_rules('show_map','', 'htmlentities|strip_tags|trim|required|max_length[3]|xss_clean|integer');
+			$this->form_validation->set_rules('penghuni','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('penghuni_mayoritas','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('with_owner','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('dekat_dgn','', 'htmlentities|strip_tags|trim|xss_clean|max_length[200]');
+			$this->form_validation->set_rules('jlantai','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('ktidur','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('kmandi','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('garage','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
+			$this->form_validation->set_rules('pembantu','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
+			$this->form_validation->set_rules('sumberair','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
+			$this->form_validation->set_rules('ltanah','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
+			$this->form_validation->set_rules('arah','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
+			$this->form_validation->set_rules('dlistrik','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
+			$this->form_validation->set_rules('lbangunan','', 'htmlentities|strip_tags|trim|xss_clean|max_length[20]');
+			$this->form_validation->set_rules('furniture','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('keamanan','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('banjir','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('univ','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('pasar','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('kendaraan','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('sekolah','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('toko','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('ac','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('lift','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('parkir','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('kantin','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('kmr_ac','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('lemari','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('meja','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('rakbuku','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('kipas','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('tvcable','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('shower','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('telkamar','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('tmptidur','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('lcd','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('mandidlm','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('dapur','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('catering','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('internet','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('rtamu','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('parkiran','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('jammalam','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('cctv','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('prt','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('olhraga','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			$this->form_validation->set_rules('cucisetrika','', 'htmlentities|strip_tags|trim|xss_clean|integer');
+			
 				if ($this->form_validation->run() == FALSE){
 					$message =  validation_errors()."Pemasangan listing gagal. Periksa form isian anda sekali lagi.";
 					$this->add_listing($id_paket,$message);
@@ -271,6 +272,7 @@ class Member_listing extends CI_Controller {
 					$insertData = array(
 						"judul" => $this->input->post('judul'),
 						"alamat" => $this->input->post('alamat'),
+						"kecamatan" => $this->input->post('kecamatan'),
 						"harga" => $this->input->post('harga'),
 						"kodepos" => $this->input->post('kodepos'),
 						"sertifikat" => $this->input->post('sertifikat'),
@@ -759,6 +761,7 @@ class Member_listing extends CI_Controller {
 			$this->form_validation->set_rules('kondisi','', 'htmlentities|strip_tags|trim|required|xss_clean|integer');
 			$this->form_validation->set_rules('harga','', 'htmlentities|strip_tags|trim|min_length[4]|max_length[50]|xss_clean');
 			$this->form_validation->set_rules('alamat','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[200]|xss_clean');
+			$this->form_validation->set_rules('kecamatan','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[100]|xss_clean');
 			$this->form_validation->set_rules('kodepos','', 'htmlentities|strip_tags|trim|min_length[4]|max_length[20]|xss_clean');
 			$this->form_validation->set_rules('sertifikat','', 'htmlentities|strip_tags|trim|max_length[100]|xss_clean');
 			$this->form_validation->set_rules('mls','', 'htmlentities|strip_tags|trim|max_length[100]|xss_clean');
@@ -798,6 +801,7 @@ class Member_listing extends CI_Controller {
 				$updateData = array(
 					"judul" => $this->input->post('judul'),
 					"alamat" => $this->input->post('alamat'),
+					"kecamatan" => $this->input->post('kecamatan'),
 					"harga" => $this->input->post('harga'),
 					"kodepos" => $this->input->post('kodepos'),
 					"sertifikat" => $this->input->post('sertifikat'),
@@ -858,6 +862,7 @@ class Member_listing extends CI_Controller {
 			$this->form_validation->set_rules('kondisi','', 'htmlentities|strip_tags|trim|required|xss_clean|integer');
 			$this->form_validation->set_rules('harga','', 'htmlentities|strip_tags|trim|min_length[4]|max_length[50]|xss_clean');
 			$this->form_validation->set_rules('alamat','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[200]|xss_clean');
+			$this->form_validation->set_rules('kecamatan','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[100]|xss_clean');
 			$this->form_validation->set_rules('kodepos','', 'htmlentities|strip_tags|trim|min_length[4]|max_length[20]|xss_clean');
 			$this->form_validation->set_rules('sertifikat','', 'htmlentities|strip_tags|trim|max_length[100]|xss_clean');
 			$this->form_validation->set_rules('mls','', 'htmlentities|strip_tags|trim|max_length[100]|xss_clean');
@@ -888,6 +893,7 @@ class Member_listing extends CI_Controller {
 				$updateData = array(
 					"judul" => $this->input->post('judul'),
 					"alamat" => $this->input->post('alamat'),
+					"kecamatan" => $this->input->post('kecamatan'),
 					"harga" => $this->input->post('harga'),
 					"kodepos" => $this->input->post('kodepos'),
 					"sertifikat" => $this->input->post('sertifikat'),
@@ -939,6 +945,7 @@ class Member_listing extends CI_Controller {
 			$this->form_validation->set_rules('kondisi','', 'htmlentities|strip_tags|trim|required|xss_clean|integer');
 			$this->form_validation->set_rules('harga','', 'htmlentities|strip_tags|trim|min_length[4]|max_length[50]|xss_clean');
 			$this->form_validation->set_rules('alamat','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[200]|xss_clean');
+			$this->form_validation->set_rules('kecamatan','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[100]|xss_clean');
 			$this->form_validation->set_rules('kodepos','', 'htmlentities|strip_tags|trim|min_length[4]|max_length[20]|xss_clean');
 			$this->form_validation->set_rules('sertifikat','', 'htmlentities|strip_tags|trim|max_length[100]|xss_clean');
 			$this->form_validation->set_rules('mls','', 'htmlentities|strip_tags|trim|max_length[100]|xss_clean');
@@ -973,6 +980,7 @@ class Member_listing extends CI_Controller {
 				$updateData = array(
 					"judul" => $this->input->post('judul'),
 					"alamat" => $this->input->post('alamat'),
+					"kecamatan" => $this->input->post('kecamatan'),
 					"harga" => $this->input->post('harga'),
 					"kodepos" => $this->input->post('kodepos'),
 					"sertifikat" => $this->input->post('sertifikat'),
@@ -1034,6 +1042,7 @@ class Member_listing extends CI_Controller {
 			$this->form_validation->set_rules('kondisi','', 'htmlentities|strip_tags|trim|required|xss_clean|integer');
 			$this->form_validation->set_rules('harga','', 'htmlentities|strip_tags|trim|min_length[4]|max_length[50]|xss_clean');
 			$this->form_validation->set_rules('alamat','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[200]|xss_clean');
+			$this->form_validation->set_rules('kecamatan','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[100]|xss_clean');
 			$this->form_validation->set_rules('latitude','', 'htmlentities|strip_tags|trim|required|max_length[100]|xss_clean');
 			$this->form_validation->set_rules('longitude','', 'htmlentities|strip_tags|trim|required|max_length[100]|xss_clean');
 			$this->form_validation->set_rules('zoom_level','', 'htmlentities|strip_tags|trim|required|max_length[2]|xss_clean');
@@ -1058,6 +1067,7 @@ class Member_listing extends CI_Controller {
 				$updateData = array(
 					"judul" => $this->input->post('judul'),
 					"alamat" => $this->input->post('alamat'),
+					"kecamatan" => $this->input->post('kecamatan'),
 					"harga" => $this->input->post('harga'),
 					"kodepos" => $this->input->post('kodepos'),
 					"sertifikat" => $this->input->post('sertifikat'),
@@ -1152,6 +1162,7 @@ class Member_listing extends CI_Controller {
 			$this->form_validation->set_rules('kondisi','', 'htmlentities|strip_tags|trim|required|xss_clean|integer');
 			$this->form_validation->set_rules('harga','', 'htmlentities|strip_tags|trim|min_length[4]|max_length[50]|xss_clean');
 			$this->form_validation->set_rules('alamat','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[200]|xss_clean');
+			$this->form_validation->set_rules('kecamatan','', 'htmlentities|strip_tags|trim|required|min_length[4]|max_length[100]|xss_clean');
 			$this->form_validation->set_rules('kodepos','', 'htmlentities|strip_tags|trim|min_length[4]|max_length[20]|xss_clean');
 			$this->form_validation->set_rules('keterangan','', 'htmlentities|strip_tags|trim|max_length[1000]|xss_clean');
 			$this->form_validation->set_rules('latitude','', 'htmlentities|strip_tags|trim|required|max_length[100]|xss_clean');
@@ -1203,6 +1214,7 @@ class Member_listing extends CI_Controller {
 				$updateData = array(
 					"judul" => $this->input->post('judul'),
 					"alamat" => $this->input->post('alamat'),
+					"kecamatan" => $this->input->post('kecamatan'),
 					"harga" => $this->input->post('harga'),
 					"kodepos" => $this->input->post('kodepos'),
 					"kondisi" =>$kond,
