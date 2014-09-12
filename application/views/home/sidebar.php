@@ -49,9 +49,12 @@
 					<?php echo anchor(($banner['side5']['url'] == null ? "#" : "http://".$banner['side5']['url']),"<img src='".base_url()."file/img/banner/".$banner['side5']['pic']."'/>",array("target" => "_blank")); ?>
 				</div>
 			</div>
+			<div class="clear"></div>
 			<div id="bottom_banner">
 				<?php echo anchor(($banner['bottom1']['url'] == null ? "#" : "http://".$banner['bottom1']['url']),"<img src='".base_url()."file/img/banner/".$banner['bottom1']['pic']."'/>",array("target" => "_blank")); ?>
 			</div>
+			
 			<div id="bottom_banner2">
 				<?php echo anchor(($banner['bottom2']['url'] == null ? "#" : "http://".$banner['bottom2']['url']),"<img src='".base_url()."file/img/banner/".$banner['bottom2']['pic']."'/>",array("target" => "_blank")); ?>
 			</div>
+			<div class="clear"></div>

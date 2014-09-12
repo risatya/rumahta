@@ -62,5 +62,6 @@
 			</div>
 			<div id="topmenu_right"></div>
 		</div>
-
+		<div class="navbar navbar-inverse navbar-fixed-top">
+</div>
 	<div id="container">
