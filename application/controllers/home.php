@@ -11,10 +11,7 @@ class Home extends CI_Controller {
     }
 	public function index(){
 		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+		
 			$this->load->library('banner');
 			$bannerData = $this->banner->getBannerPic();
 			$this->session->set_userdata(array("bannerData"=>$bannerData));
@@ -22,46 +19,18 @@ class Home extends CI_Controller {
 			$data['kabupaten'] = $this->mdl_home->getKabInSulsel();
 			$data['testimoni'] = $this->mdl_home->getMemberTesti();
 			$data['news'] = $this->mdl_home->getMemberNews();
-			
-			$data['premium'] = $this->mdl_home->getPremiumListingCount();
-			$data['free'] = $this->mdl_home->getFreeListingCount();
+	
 
 			$total_row = $this->db->count_all('tbl_listing_member');
 			
-			$per_page = 10;
-			if($data['premium'] > $per_page){
-				$sisaPremium = $data['premium'] % $per_page; //jumlah listing premium di halamn terahir ?
-				$premiumLastPage = floor($data['premium'] / $per_page);
-			}
-			else{
-				$sisaPremium = $data['premium'];
-				$premiumLastPage = 0;
-			}
-			$sisaFree = $per_page - $sisaPremium;
-			$a = $sisaFree % 2;
-			$sessionData = array();
-			if($a == 1){
-				$start_page = $premiumLastPage * $per_page;
-			}
-			/*
-			print_r("sisaPremium = ".$sisaPremium);
-			print_r("<br/>");
-			print_r("premiumLastPage = ".$premiumLastPage);
-			print_r("<br/>");
-			print_r("sisaFree = ".$sisaFree);
-			print_r("<br/>");
-			print_r($sessionData);
-			print_r("<br/>");
-			*/
-			
 			if($start_page === 0){
-				$per_page = 11;
+				$per_page = 15;
 			}
 			
 			$this->load->library('pagination');
 			$config['base_url'] 	= base_url().'index.php/page/all_nextpage/';
 			$config['total_rows'] 	= $total_row;
-			$config['per_page'] 	= 10;
+			$config['per_page'] 	= 15;
 			$config['first_link'] 	= 'First';
 			$config['last_link'] 	= 'Last';
 			$config['next_link'] 	= ' Next &raquo;';
@@ -69,7 +38,7 @@ class Home extends CI_Controller {
 			$this->pagination->initialize($config);
 
 			if($start_page === 0){
-				$data['list_listing'] = $this->mdl_listing->getListingForPage(11,0);
+				$data['list_listing'] = $this->mdl_listing->getListingForPage(15,0);
 			}
 			else{
 				$data['list_listing'] = $this->mdl_listing->getListingForPage($config['per_page'],0);
@@ -133,7 +102,7 @@ class Home extends CI_Controller {
 			$this->load->view("home/footer");
 				
 		}
-	}
+	
 	
 	public function signup($message=''){
 		if($this->session->userdata("logged_in") == false){
