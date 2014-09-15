@@ -10,7 +10,7 @@ class Home extends CI_Controller {
 		date_default_timezone_set('Asia/Jakarta');
     }
 	public function index(){
-		$this->load->library('user_agent');
+		
 		
 			$this->load->library('banner');
 			$bannerData = $this->banner->getBannerPic();

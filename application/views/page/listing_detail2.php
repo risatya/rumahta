@@ -185,6 +185,7 @@
 								<div style="width:100%;float:left;margin-right:20px;">
 									<img src="<?php echo base_url(); ?>file/img/icon_garden.png" width="20px" style="margin-top:-5px;"/> <span>LUAS TANAH : </span> <?php echo $item->luas_tanah; ?> M<sup>2</sup><br/>
 									<img src="<?php echo base_url(); ?>file/img/icon_compas.png" width="20px" style="margin-top:-5px;"/> <span>ARAH MATA ANGIN : </span> <?php echo $item->mata_angin; ?> <br/>
+									<img src="<?php echo base_url(); ?>file/img/view.png" width="20px" style="margin-top:-5px;"/> <span>IKLAN DILIHAT : </span> <?php echo $item->mata_angin; ?> <br/>
 								</div>
 							</div>
 							<div class="page-header" id="page-header" style="margin-top:10px">

@@ -12,11 +12,6 @@ class Page extends CI_Controller {
     }
 	
 	public function listing_detail($id,$url_title=''){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
 			$this->load->library('banner');
 			$bannerData = $this->banner->getBannerPic();
 			$this->session->set_userdata(array("bannerData"=>$bannerData));
@@ -24,6 +19,8 @@ class Page extends CI_Controller {
 			$data['kabupaten'] = $this->mdl_home->getKabInSulsel();
 			$data['testimoni'] = $this->mdl_home->getMemberTesti();
 			$data['news'] = $this->mdl_home->getMemberNews();
+			$data['list_listing'] = $this->mdl_listing->getFreeListingForPageRandom(10,0);
+			
 			
 			$cek = $this->mdl_page->cekListingDetail($id);
 			if($cek){
@@ -99,7 +96,7 @@ class Page extends CI_Controller {
 			else{
 				redirect('home/index');
 			}
-		}
+		
 	}
 	
 	public function all(){

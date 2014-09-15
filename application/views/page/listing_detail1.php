@@ -199,6 +199,7 @@
 									<img src="<?php echo base_url(); ?>file/img/icon_listrik.png" width="20px" style="margin-top:-5px;"/> <span>DAYA LISTRIK : </span> <?php echo $item->daya_listrik; ?> Watt <br/>
 									<img src="<?php echo base_url(); ?>file/img/icon_water.png" width="20px" style="margin-top:-5px;"/> <span>SUMBER AIR : </span> <?php echo $item->sumber_air; ?> <br/>
 									<img src="<?php echo base_url(); ?>file/img/icon_compas.png" width="20px" style="margin-top:-5px;"/> <span>ARAH MATA ANGIN : </span> <?php echo $item->mata_angin; ?> <br/>
+									<img src="<?php echo base_url(); ?>file/img/view.png" width="20px" style="margin-top:-5px;"/> <span>IKLAN DILIHAT : </span> <?php echo $item->mata_angin; ?> <br/>
 								</div>
 							</div>
 							<div class="page-header" id="page-header" style="margin-top:10px">
@@ -282,5 +283,26 @@
 								<?php } ?>
 								
 							</div>
+							<h1>
+									<small>Iklan Terkait</small>
+								</h1>
+							<?php foreach($list_listing as $item): ?>
+			
+					<div id="listing_free_wrapper">
+						<div id="listing_free_list">
+							<div id="free_photo">
+								<?php echo anchor("page/listing_detail/".$item->id_listing_member."/".url_title($item->nama_kategori."-".$item->judul),"<img src='".base_url()."file/img/free/listing_pic/".($cover_listing[$counter] != null ? $cover_listing[$counter] : 'default.jpg')."' width='85px' />"); ?>
+							</div>
+							<div id="free_detail">
+								<?php echo anchor("page/listing_detail/".$item->id_listing_member."/".url_title($item->nama_kategori."-".$item->judul),(strlen($item->judul) > 60 ? substr($item->judul,0,57)."..." : $item->judul),array("class"=>"free_title")); ?><br/>
+								<?php echo ($item->nama_kategori); ?> - <?php echo $item->harga; ?> <br/>
+								<?php echo (ucfirst(strtolower($item->nama_kabupaten)));?><br/>
+								<?php echo (strlen($item->alamat) > 55 ? substr($item->alamat,0,52)."..." : $item->alamat); ?>
+							</div>
+						</div>
+					</div>
+					<?php
+		endforeach;
+		?>
 						</fieldset>
 						<?php endforeach; ?>

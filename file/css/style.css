@@ -746,7 +746,7 @@ img #premium_photo{
 /*--------------------------------------Listing Free--*/
 #listing_free_wrapper{
 	float : left;
-	width : 100%;
+	width: 50%;
 	margin : 15px 0 -10px 0;
 }
 #left_listing{
@@ -791,9 +791,10 @@ img #premium_photo{
 #free_detail a.free_title{
 	float : left;
 	font-family : verdana;
-	font-size : 12px;
+	font-size: 12px;
 	color : #84c225;
 	font-weight : bold;
+	width: 230px;
 	text-decoration : none;
 }
 #free_detail a.free_title:hover{

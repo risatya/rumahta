@@ -203,7 +203,8 @@
 								<?php if($item->garasi != null && $z <= 5){ ?><img src="<?php echo base_url(); ?>file/img/icon_garage.png" title="Garasi"/> <?php echo $item->garasi; ?> &nbsp;&nbsp; <?php $z++; } ?>
 								<?php if($item->jml_lantai != 0 && $z <= 5){ ?><img src="<?php echo base_url(); ?>file/img/icon_jumlahlantai.png" title="Jumlah lantai"/> <?php echo $item->jml_lantai; ?> &nbsp;&nbsp; <?php $z++; } ?>
 								<?php if($item->pembantu != null && $z <= 5){ ?><img src="<?php echo base_url(); ?>file/img/icon_pembantu.png" title="Kamar pembantu"/> <?php echo $item->pembantu; ?> &nbsp;&nbsp; <?php $z++; } ?>
-								<?php if($item->daya_listrik != null && $z <= 5){ ?><img src="<?php echo base_url(); ?>file/img/icon_listrik.png" title="Daya listrik"/> <?php echo $item->daya_listrik; ?>Watt &nbsp;&nbsp; <?php $z++; } ?>
+								<?php
+								if($item->daya_listrik != null && $z <= 5){ ?><img src="<?php echo base_url(); ?>file/img/icon_listrik.png" title="Daya listrik"/> <?php echo $item->daya_listrik; ?>Watt &nbsp;&nbsp; <?php $z++; } ?>
 								<?php if($item->sumber_air != null && $z <= 5){ ?><img src="<?php echo base_url(); ?>file/img/icon_water.png" title="Sumber air"/> <?php echo $item->sumber_air; ?> &nbsp;&nbsp; <?php $z++; } ?>
 								<?php if($item->mata_angin != null && $z <= 5){ ?><img src="<?php echo base_url(); ?>file/img/icon_compas.png" title="Sumber air"/> <?php echo $item->mata_angin; ?> &nbsp;&nbsp; <?php $z++; } ?>
 								<?php $z = 0; ?>
