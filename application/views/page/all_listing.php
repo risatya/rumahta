@@ -22,7 +22,7 @@
 							$str .= "<p class='adv_price'>".($item->harga != null ? "Rp. ".$item->harga : "Rp. -")."</p>";
 						?>
 						
-						<?php echo anchor("page/listing_detail/".$item->id_listing_member."/".url_title($item->nama_kategori."-".$item->judul),$str,array("id"=>"premium_title")); ?>
+						<?php echo anchor("page/listing_detail/".$item->id_listing_member."/".url_title($item->nama_kategori."-".$item->judul),$str,array("id"=>"premium_title")); ?><h2>
 							
 						<div id="premium_photo">
 							<?php if($cover_listing[$counter] != null){ ?>

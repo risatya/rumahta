@@ -29,7 +29,7 @@
 <body>
 	<div id="header">
 	<div class="row">
-		<div id="logo"><h1><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>file/img/logo.png"></a></h1></div>
+		<div id="logo"><a href="<?php echo base_url();?>"><h1 title="Rumahta.Com"><img src="<?php echo base_url();?>file/img/logo.png"></h1></a></div>
 		<div id="loginform">
 			<p>
 				Belum punya akun ? <?php echo anchor("home/signup","Daftar Sekarang");?> | <?php echo anchor("home/forgot","Lupa Password");?>

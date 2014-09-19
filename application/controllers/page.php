@@ -100,11 +100,7 @@ class Page extends CI_Controller {
 	}
 	
 	public function all(){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+		
 			$this->load->library('banner');
 			$bannerData = $this->banner->getBannerPic();
 			$this->session->set_userdata(array("bannerData"=>$bannerData));
@@ -180,15 +176,10 @@ class Page extends CI_Controller {
 			$this->load->view("home/sidebar",$data);
 			$this->load->view("home/news",$data);
 			$this->load->view("home/footer");
-		}
 	}
 	
 	public function all_nextpage(){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+
 			$this->load->library('banner');
 			$bannerData = $this->banner->getBannerPic();
 			$this->session->set_userdata(array("bannerData"=>$bannerData));
@@ -221,7 +212,7 @@ class Page extends CI_Controller {
 			$this->load->library('pagination');
 			$config['base_url'] 	= base_url().'index.php/page/all_nextpage/';
 			$config['total_rows'] 	= $total_row;
-			$config['per_page'] 	= 10;
+			$config['per_page'] 	= 15;
 			$config['first_link'] 	= 'First';
 			$config['last_link'] 	= 'Last';
 			$config['next_link'] 	= ' Next &raquo; ';
@@ -230,7 +221,7 @@ class Page extends CI_Controller {
 			// $data['premium_listing'] = $this->mdl_listing->getPremiumListingForPage($config['per_page'],$this->uri->segment(3));
 			// $data['free_listing'] = $this->mdl_listing->getFreeListingForPage($config['per_page'],$this->uri->segment(3));
 			if($this->uri->segment(3) == $start_page){
-				$data['list_listing'] = $this->mdl_listing->getListingForPage(11,$this->uri->segment(3));
+				$data['list_listing'] = $this->mdl_listing->getListingForPage(15,$this->uri->segment(3));
 			}
 			else{
 				$data['list_listing'] = $this->mdl_listing->getListingForPage($config['per_page'],$this->uri->segment(3));
@@ -285,15 +276,10 @@ class Page extends CI_Controller {
 			$this->load->view("home/sidebar",$data);
 			$this->load->view("home/news",$data);
 			$this->load->view("home/footer");
-		}
+
 	}
 	
 	public function all_category($cat){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
 			$cek = $this->mdl_page->cekStatusCategory($cat);
 			if($cek){
 				$this->load->library('banner');
@@ -369,15 +355,9 @@ class Page extends CI_Controller {
 			else{
 				redirect("home/index");
 			}
-		}
 	}
 	
 	public function all_category_nextpage($cat){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
 			$cek = $this->mdl_page->cekStatusCategory($cat);
 			if($cek){
 				$this->load->library('banner');
@@ -457,15 +437,9 @@ class Page extends CI_Controller {
 			else{
 				redirect("home/index");
 			}
-		}
 	}
 	
 	public function category($id_category){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
 			$cek = $this->mdl_page->cekIDCategory($id_category);
 			if($cek){
 				$this->load->library('banner');
@@ -548,15 +522,10 @@ class Page extends CI_Controller {
 			else{
 				redirect("home/index");
 			}
-		}
 	}
 	
 	public function category_nextpage($id_category){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+
 			$cek = $this->mdl_page->cekIDCategory($id_category);
 			if($cek){
 				$this->load->library('banner');
@@ -638,15 +607,11 @@ class Page extends CI_Controller {
 			else{
 				redirect("home/index");
 			}
-		}
+		
 	}
 	
 	public function news_detail($id_news,$title_link=''){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+	
 			$cek = $this->mdl_page->cekNews($id_news);
 			if($cek){
 				$this->load->library('banner');
@@ -687,15 +652,11 @@ class Page extends CI_Controller {
 			else{
 				redirect("home/index");
 			}
-		}
+		
 	}
 	
 	public function all_news(){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+
 			$this->load->library('banner');
 			$bannerData = $this->banner->getBannerPic();
 			$this->session->set_userdata(array("bannerData"=>$bannerData));
@@ -738,15 +699,11 @@ class Page extends CI_Controller {
 			$this->load->view("home/sidebar",$data);
 			$this->load->view("home/news",$data);
 			$this->load->view("home/footer");
-		}
+		
 	}
 	
 	public function news_nextpage(){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+
 			$this->load->library('banner');
 			$bannerData = $this->banner->getBannerPic();
 			$this->session->set_userdata(array("bannerData"=>$bannerData));
@@ -789,15 +746,11 @@ class Page extends CI_Controller {
 			$this->load->view("home/sidebar",$data);
 			$this->load->view("home/news",$data);
 			$this->load->view("home/footer");
-		}
+		
 	}
 	
 	public function testimoni_detail($id_testi){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+
 			$cek = $this->mdl_page->cekTestimoni($id_testi);
 			if($cek){
 				$this->load->library('banner');
@@ -833,15 +786,11 @@ class Page extends CI_Controller {
 			else{
 				redirect("home/index");
 			}
-		}
+		
 	}
 	
 	public function all_testimoni(){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+
 			$this->load->library('banner');
 			$bannerData = $this->banner->getBannerPic();
 			$this->session->set_userdata(array("bannerData"=>$bannerData));
@@ -884,15 +833,11 @@ class Page extends CI_Controller {
 			$this->load->view("home/sidebar",$data);
 			$this->load->view("home/news",$data);
 			$this->load->view("home/footer");
-		}
+		
 	}
 	
 	public function testimoni_nextpage(){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+
 			$this->load->library('banner');
 			$bannerData = $this->banner->getBannerPic();
 			$this->session->set_userdata(array("bannerData"=>$bannerData));
@@ -935,15 +880,11 @@ class Page extends CI_Controller {
 			$this->load->view("home/sidebar",$data);
 			$this->load->view("home/news",$data);
 			$this->load->view("home/footer");
-		}
+		
 	}
 	
 	public function page_detail($id_page,$title){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+
 			$this->load->library('banner');
 			$bannerData = $this->banner->getBannerPic();
 			$this->session->set_userdata(array("bannerData"=>$bannerData));
@@ -976,15 +917,12 @@ class Page extends CI_Controller {
 			$this->load->view("home/sidebar");
 			$this->load->view("home/news");
 			$this->load->view("home/footer");
-		}
+		
 	}
 	
 	public function statistik(){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+	
+		
 			$this->load->library('banner');
 			$bannerData = $this->banner->getBannerPic();
 			$this->session->set_userdata(array("bannerData"=>$bannerData));
@@ -1050,14 +988,11 @@ class Page extends CI_Controller {
 			$this->load->view("home/sidebar");
 			$this->load->view("home/news");
 			$this->load->view("home/footer");
-		}
+		
 	}
 	
 	public function search(){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
+
 		else{
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules('keyword','','trim|xss_clean|htmlentities|strip_tags');
@@ -1300,15 +1235,11 @@ class Page extends CI_Controller {
 			else{
 				redirect('home/index');
 			}
-		}
+		
 	}
 	
 	public function search_nextpage(){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+		
 			$category = array();
 			
 			$keyword = $this->session->userdata('keyword');
@@ -1386,15 +1317,11 @@ class Page extends CI_Controller {
 			$this->load->view("home/sidebar",$data);
 			$this->load->view("home/news",$data);
 			$this->load->view("home/footer");
-		}
+		
 	}
 	
 	public function search_page(){
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			redirect('http://rumahta.com/m');
-		}
-		else{
+		
 			$this->load->library('banner');
 			$bannerData = $this->banner->getBannerPic();
 			$this->session->set_userdata(array("bannerData"=>$bannerData));
@@ -1420,7 +1347,7 @@ class Page extends CI_Controller {
 				$this->load->view("home/news",$data);
 				$this->load->view("home/footer");
 			}
-		}
+		
 	}
 	
 }

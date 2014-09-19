@@ -20,7 +20,6 @@ class Home extends CI_Controller {
 			$data['testimoni'] = $this->mdl_home->getMemberTesti();
 			$data['news'] = $this->mdl_home->getMemberNews();
 	
-
 			$total_row = $this->db->count_all('tbl_listing_member');
 			
 			if($start_page === 0){

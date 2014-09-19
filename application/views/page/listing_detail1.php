@@ -10,7 +10,37 @@
 						<fieldset>
 							<legend><?php echo $item->judul; ?></legend>
 							
-							<div style="float:left;margin:-10px 0 10px 0;">
+							<div id="gallery_photo">
+								
+								<?php if($listing_photo != null){ ?>
+								<div id="rg-gallery" class="rg-gallery">
+									<div class="rg-thumbs">
+										<div class="es-carousel-wrapper" style="margin:0px 0 10px 0">
+											<div class="es-nav">
+												<span class="es-nav-prev">Previous</span>
+												<span class="es-nav-next">Next</span>
+											</div>
+											<div class="es-carousel">
+												<ul>
+												<?php foreach($listing_photo as $cover): ?>
+												<?php if($item->status_paket == 1){ ?>
+														<li><a href="#"><img src="<?php echo base_url(); ?>file/img/free/thumb/<?php echo $cover->listing_photo_thumb; ?>" data-large="<?php echo base_url(); ?>file/img/free/<?php echo $cover->listing_photo_big;?>" /></a></li>
+												<?php } else {?>
+														<li><a href="#"><img src="<?php echo base_url(); ?>file/img/premium/thumb/<?php echo $cover->listing_photo_thumb; ?>" data-large="<?php echo base_url(); ?>file/img/premium/<?php echo $cover->listing_photo_big;?>" /></a></li>
+												<?php } ?>
+												<?php endforeach; ?>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<?php }else{ ?>
+								Tidak ada foto.
+								<?php } ?>
+								
+							</div>
+							<div class="clear" style="clear:both;"></div>
+							<div style="float:left;margin:10px 0 10px 0;">
 								<script type="text/javascript">var switchTo5x=true;</script>
 								<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 								<script type="text/javascript">stLight.options({publisher: "4d898c07-8504-480d-aa05-6a835c626475"}); </script>
@@ -251,38 +281,7 @@
 								</div>
 							</script>
 							
-							<div class="page-header" id="page-header" style="margin:10px 0 10px 0;">
-								<h1><small>Foto</small></h1>
-							</div>
-							<div id="gallery_photo">
-								
-								<?php if($listing_photo != null){ ?>
-								<div id="rg-gallery" class="rg-gallery">
-									<div class="rg-thumbs">
-										<div class="es-carousel-wrapper" style="margin:0px 0 10px 0">
-											<div class="es-nav">
-												<span class="es-nav-prev">Previous</span>
-												<span class="es-nav-next">Next</span>
-											</div>
-											<div class="es-carousel">
-												<ul>
-												<?php foreach($listing_photo as $cover): ?>
-												<?php if($item->status_paket == 1){ ?>
-														<li><a href="#"><img src="<?php echo base_url(); ?>file/img/free/thumb/<?php echo $cover->listing_photo_thumb; ?>" data-large="<?php echo base_url(); ?>file/img/free/<?php echo $cover->listing_photo_big;?>" /></a></li>
-												<?php } else {?>
-														<li><a href="#"><img src="<?php echo base_url(); ?>file/img/premium/thumb/<?php echo $cover->listing_photo_thumb; ?>" data-large="<?php echo base_url(); ?>file/img/premium/<?php echo $cover->listing_photo_big;?>" /></a></li>
-												<?php } ?>
-												<?php endforeach; ?>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-								<?php }else{ ?>
-								Tidak ada foto.
-								<?php } ?>
-								
-							</div>
+							
 							<h1>
 									<small>Iklan Terkait</small>
 								</h1>
