@@ -28,7 +28,9 @@
 <body>
 	<div id="header">
 	<div class="row">
-		<div id="logo"><h1><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>file/img/logo.png"></a></h1></div>
+		<div id="logo"><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>file/img/logo.png"></a>
+		<h1 style="display:none;"><a href="<?php echo base_url();?>">MetaHD.Com</a></h1>
+		</div>
 		<div id="loginform">
 			<p>
 				Belum punya akun ? <?php echo anchor("home/signup","Daftar Sekarang");?> | <a href="#">Lupa Password</a>

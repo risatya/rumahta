@@ -993,7 +993,7 @@ class Page extends CI_Controller {
 	
 	public function search(){
 
-		else{
+		
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules('keyword','','trim|xss_clean|htmlentities|strip_tags');
 			$this->form_validation->set_rules('location','','trim|xss_clean|htmlentities|strip_tags');

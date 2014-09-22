@@ -74,7 +74,7 @@
 							<?php endforeach; ?>
 							
 							<div class="page-header" id="page-header">
-								<h1><small>Detail / Deskripsi</small></h1>
+								<h2><small>Detail / Deskripsi</small></h2>
 							</div>
 							<div id="detail_wrapper">
 								<div style="width:100%;float:left;">
@@ -167,7 +167,7 @@
 								</div>
 								
 								<div class="page-header" id="page-header">
-									<h1><small></small></h1>
+									<h2><small></small></h2>
 								</div>
 								
 								<div style="width:50%;float:left;margin-right:20px;">
@@ -179,7 +179,7 @@
 								</div>
 							</div>
 							<div class="page-header" id="page-header">
-								<h1><small></small></h1>
+								<h2><small></small></h2>
 							</div>
 							<div id="detail_wrapper">
 								<div style="width:100%;float:left;margin-right:20px;">
@@ -189,7 +189,7 @@
 								</div>
 							</div>
 							<div class="page-header" id="page-header" style="margin-top:10px">
-								<h1><small>Fasilitas Lokasi</small></h1>
+								<h2><small>Fasilitas Lokasi</small></h2>
 							</div>
 							<div id="detail_wrapper">
 								<?php foreach($fasilitas_lokasi as $row):?>
@@ -238,7 +238,7 @@
 							</script>
 							
 							<div class="page-header" id="page-header" style="margin:10px 0 10px 0;">
-								<h1><small>Foto</small></h1>
+								<h2><small>Foto</small></h2>
 							</div>
 							<div id="detail_wrapper">
 								

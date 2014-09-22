@@ -30,7 +30,7 @@
 <body>
 	<div id="header">
 	<div class="row">
-		<div id="logo"><h1><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>file/img/logo.png"></a></h1></div>
+		<div id="logo"><h1 title="Rumahta.Com"><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>file/img/logo.png"></a></h1></div>
 		<div id="loginform">
 		<?php foreach($member as $item): 
 			if($item->user_photo == null){

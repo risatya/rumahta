@@ -74,7 +74,7 @@
 							<?php endforeach; ?>
 							
 							<div class="page-header" id="page-header">
-								<h1><small>Detail / Deskripsi</small></h1>
+								<h2><small>Detail / Deskripsi</small></h2>
 							</div>
 							<div id="detail_wrapper">
 								<div style="width:100%;float:left;">
@@ -182,7 +182,7 @@
 								</div>
 							</div>
 							<div class="page-header" id="page-header" style="margin:10px 0 10px 0;">
-								<h1><small>Fasilitas Lokasi</small></h1> <!--<span class="label" style="float:right;margin:-30px 0 0 0px;padding:4px;">Edit Fasilitas Lokasi</span>-->
+								<h2><small>Fasilitas Lokasi</small></h2> <!--<span class="label" style="float:right;margin:-30px 0 0 0px;padding:4px;">Edit Fasilitas Lokasi</span>-->
 							</div>
 							<div id="detail_wrapper">
 								<?php foreach($fasilitas_lokasi as $row):?>
@@ -202,7 +202,7 @@
 								<?php endforeach; ?>
 							</div>
 							<div class="page-header" id="page-header" style="margin:10px 0 10px 0;">
-								<h1><small>Fasilitas Kamar</small></h1> <!--<span class="label" style="float:right;margin:-30px 0 0 0px;padding:4px;">Edit Fasilitas Kamar</span>-->
+								<h2><small>Fasilitas Kamar</small></h2> <!--<span class="label" style="float:right;margin:-30px 0 0 0px;padding:4px;">Edit Fasilitas Kamar</span>-->
 							</div>
 							<div id="detail_wrapper">
 								<?php foreach($fasilitas_kamar as $row):?>
@@ -226,7 +226,7 @@
 								<?php endforeach; ?>
 							</div>
 							<div class="page-header" id="page-header" style="margin:10px 0 10px 0;">
-								<h1><small>Fasilitas Kost</small></h1> <!-- <span class="label" style="float:right;margin:-30px 0 0 0px;padding:4px;">Edit Fasilitas Kost</span>-->
+								<h2><small>Fasilitas Kost</small></h2> <!-- <span class="label" style="float:right;margin:-30px 0 0 0px;padding:4px;">Edit Fasilitas Kost</span>-->
 							</div>
 							<div id="detail_wrapper">
 								<?php foreach($fasilitas_kost as $row):?>
@@ -278,7 +278,7 @@
 							</script>
 							
 							<div class="page-header" id="page-header" style="margin:10px 0 10px 0;">
-								<h1><small>Foto</small></h1>
+								<h2><small>Foto</small></h2>
 							</div>
 							<div id="detail_wrapper">
 								<div id="rg-gallery" class="rg-gallery">
