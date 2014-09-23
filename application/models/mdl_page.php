@@ -23,6 +23,12 @@ Class Mdl_page extends CI_Model{
 		$this->db->join('tbl_kab_indo', 'tbl_listing_member.id_kabupaten = tbl_kab_indo.id_kabupaten', 'left');
 		return $this->db->get()->result();
 	}
+
+	function hitungJumlahView($userURL){
+		$oke = $this->db->query("select COUNT(view) as jumlah from tbl_view_listing where id_listing  = '$userURL'");
+		return $oke->row_array();
+
+	}
 	
 	function getMemberDetail($id){
 		$this->db->select('nama,hp,telepon,alamat,user_photo,company_name,company_photo');
@@ -33,6 +39,10 @@ Class Mdl_page extends CI_Model{
 	
 	function addListingView($insertData){
 		$this->db->insert("tbl_listing_view",$insertData);
+	}
+
+	function tambahListView($insertview){
+		$this->db->insert("tbl_view_listing",$insertview);
 	}
 	
 	public function cekStatusCategory($cat){

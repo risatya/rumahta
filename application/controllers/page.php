@@ -12,6 +12,16 @@ class Page extends CI_Controller {
     }
 	
 	public function listing_detail($id,$url_title=''){
+			$userURL = $this->uri->segment(3);
+			$insertview = array(
+				"id_listing" => $userURL,
+				"view" => 1
+			);
+			//print_r($insertview);
+
+			$query = $this->mdl_page->tambahListView($insertview);
+			//print_r($query);
+			//exit();
 			$this->load->library('banner');
 			$bannerData = $this->banner->getBannerPic();
 			$this->session->set_userdata(array("bannerData"=>$bannerData));
@@ -20,6 +30,15 @@ class Page extends CI_Controller {
 			$data['testimoni'] = $this->mdl_home->getMemberTesti();
 			$data['news'] = $this->mdl_home->getMemberNews();
 			$data['list_listing'] = $this->mdl_listing->getFreeListingForPageRandom(10,0);
+			$data['jumlah_view'] = $this->mdl_page->hitungJumlahView($userURL)['jumlah'];
+			//ambil cover foto masing - masing listing premium.
+			$x = 0;
+			$data['cover_listing'] = array();
+			foreach($data['list_listing'] as $item):
+				$cover = $this->mdl_home->getCoverPhotoByID($item->id_listing_member);
+				$data['cover_listing'][$x] = $cover[0]->listing_photo_list;
+				$x++;
+			endforeach;
 			
 			
 			$cek = $this->mdl_page->cekListingDetail($id);

@@ -5,7 +5,6 @@
 								<?php echo $message; ?>
 							</div>
 						<?php } ?>
-						
 						<?php foreach($listing as $item ):?>
 						<fieldset>
 							<legend><?php echo $item->judul; ?></legend>
@@ -229,7 +228,7 @@
 									<img src="<?php echo base_url(); ?>file/img/icon_listrik.png" width="20px" style="margin-top:-5px;"/> <span>DAYA LISTRIK : </span> <?php echo $item->daya_listrik; ?> Watt <br/>
 									<img src="<?php echo base_url(); ?>file/img/icon_water.png" width="20px" style="margin-top:-5px;"/> <span>SUMBER AIR : </span> <?php echo $item->sumber_air; ?> <br/>
 									<img src="<?php echo base_url(); ?>file/img/icon_compas.png" width="20px" style="margin-top:-5px;"/> <span>ARAH MATA ANGIN : </span> <?php echo $item->mata_angin; ?> <br/>
-									<img src="<?php echo base_url(); ?>file/img/view.png" width="20px" style="margin-top:-5px;"/> <span>IKLAN DILIHAT : </span> <?php echo $item->mata_angin; ?> <br/>
+									<img src="<?php echo base_url(); ?>file/img/view.png" width="20px" style="margin-top:-5px;"/> <span>IKLAN DILIHAT : </span> <?php echo $jumlah_view; ?> <br/>
 								</div>
 							</div>
 							<div class="page-header" id="page-header" style="margin-top:10px">

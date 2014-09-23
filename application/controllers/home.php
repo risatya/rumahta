@@ -19,7 +19,17 @@ class Home extends CI_Controller {
 			$data['kabupaten'] = $this->mdl_home->getKabInSulsel();
 			$data['testimoni'] = $this->mdl_home->getMemberTesti();
 			$data['news'] = $this->mdl_home->getMemberNews();
-	
+			
+			$data['premium_listing'] = $this->mdl_listing->getPremiumListingForPage(5,0);
+			//ambil cover foto masing - masing listing premium.
+			$a = 0;
+			$data['premium_listing'] = array();
+			foreach($data['premium_listing'] as $item):
+				$cover = $this->mdl_home->getCoverPhotoByID($item->id_listing_member);
+				$data['premium_listing'][$a] = $cover[0]->listing_photo_list;
+				$a++;
+			endforeach;
+
 			$total_row = $this->db->count_all('tbl_listing_member');
 			
 			if($start_page === 0){
@@ -43,6 +53,8 @@ class Home extends CI_Controller {
 				$data['list_listing'] = $this->mdl_listing->getListingForPage($config['per_page'],0);
 			}
 			
+
+
 			//ambil cover foto masing - masing listing premium.
 			$x = 0;
 			$data['cover_listing'] = array();
