@@ -457,7 +457,7 @@ span.kriteria:hover{
 }
 #search_btn{
 	float : left;
-	width : 100%;
+	width: 96%;
 }
 #member_navi{
 	float : left;
@@ -869,10 +869,10 @@ p.listing_paging a:hover{
 }
 #kalkulator_title{
 	float : left;
-	width: 306px;
-	height : 68px;
+	width: 350px;
+	height: 88px;
 	background : url(../img/kalkulator_title.png);
-	margin : -15px 0 0 -7px;
+	margin: -19px 0 0 -7px;
 }
 #kalkulator_title span{
 	float : left;
@@ -880,7 +880,7 @@ p.listing_paging a:hover{
 	font-size : 15px;
 	font-weight : bold;
 	color : #325103;
-	margin : 20px 0 0 65px;
+	margin: 27px 0 0 85px;
 }
 #calc_col_1{
 	float : left;
@@ -991,7 +991,7 @@ p.listing_paging a:hover{
 #news_content_text{
 	float : left;
 	width : 99%;
-	height: 120px;
+	height: 70px;
 	margin : 0 0 8px 0;
 }
 #news_content_text img{
@@ -1532,8 +1532,15 @@ fieldset.user_listing{
 	#content_wrapper{
 		width:100%;
 	}
-	#topmenu_wrapper{
-		display:none;
+
+	.row h1 a{
+	display: block;
+	text-indent: -999999px;
+	background: url(images/logo_small.png) no-repeat;
+	width: 400px;
+	height: 90px;
+	float: left;
+	margin-bottom: 40px;
 	}
 	#logo{
 		display: block;
@@ -1545,11 +1552,117 @@ fieldset.user_listing{
 	#header{
 		width: 100%;
 		height: 100px;
-}
+	}
 	#loginform{
 		text-align:center;
 		width: 90%;
 	}
+	ul#nav {
+	position : relative;
+    display: block;
+    margin : 0 auto;
+    
+	width: 752px;
+	text-align : center;
+	/*z-index : 1500;*/
+	}
+	#nav li {
+	float:left;
+	display:block;
+	position:relative;
+	font-size: 11px;
+	font-family: arial;
+	color: #fff;
+	font-weight : bold;
+}
+/* this is the parent menu */
+#nav li a {
+	text-align: center;
+	display:block;
+	padding:16px 25px;
+	text-decoration:none;
+	color:#fff;
+	text-align:center;
+	float: left;
+	background:none;
+	-webkit-transition: all 0.2s ease-out;  /* Saf3.2+, Chrome */
+ -moz-transition: all 0.5s ease-out;  /* FF4+ */
+  -ms-transition: all 0.5s ease-out;  /* IE10 */
+   -o-transition: all 0.5s ease-out;  /* Opera 10.5+ */
+	  transition: all 0.5s ease-out;
+}
+#nav li a:hover {
+	/*text-shadow : 0 0 50px #fff,0 0 40px #fff;*/
+	padding:14px 25px 14px 25px;
+	color : #fff;
+}
+/* you can make a different style for default selected value */
+#nav a.selected {
+	color:#f00;
+}
+/* submenu, it's hidden by default */
+#nav ul {
+	position:absolute;
+	left:0;
+	display:none;
+	margin:48px 0 0 0px;
+	list-style:none;
+	z-index: 100;
+	font-size : 13px;
+	font-weight : bold;
+	background : #ffffff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dcdcdc)); /* Safari 4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #ffffff, #dcdcdc); /* Chrome 10+, Safari 5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #ffffff, #dcdcdc); /* Firefox 3.6-15 */
+	background-image:      -o-linear-gradient(top, #ffffff, #dcdcdc); /* Opera 11.10+ */
+	background-image:         linear-gradient(to bottom, #ffffff, #dcdcdc); /* Firefox 16+ */
+	padding:10px;
+	border : 1px solid #cacaca;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+#nav ul li {
+	width:190px;
+	/*border-top:1px solid #000;*/
+}
+/* display block will make the link fill the whole area of LI */
+#nav ul a {
+	display:block;
+	height:20px;
+	padding: 5px 5px;
+	color:#757575;
+	width:190px;
+	text-align: left;
+	font-size : 13px;
+}
+#nav ul a:hover {
+	text-decoration:none;
+	height:13px;
+	color : #fff;
+	background : #489700;
+	width : 87%;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding : 15px 15px 15px 10px;
+}
+	#topmenu_left{
+		display: none;
+
+	}
+	#topmenu_right{
+		display: none;
+
+	}
+	#topmenu{
+	width: 99%;}
 	#loginform p{
 		text-align:center;
 	}
@@ -1558,7 +1671,7 @@ fieldset.user_listing{
 	}
 	#topmenu_wrapper{
 	margin: 0 auto;
-	width: 1130px;
+	width: 100%;
 	position: relative;
 	z-index: 1000;
 	}
@@ -1700,14 +1813,21 @@ fieldset.user_listing{
 	{
 		left: 0;
 	}
-	#topmenu_wrapper{
-		display:none;
-	}
+
 	
+	.row h1 a{
+	display: block;
+	text-indent: -999999px;
+	background: url(images/logo_small.png) no-repeat;
+	width: 400px;
+	height: 90px;
+	float: left;
+	margin-bottom: 40px;
+	}
 	#logo{
 		display: block;
 		text-indent: -999999px;
-		width: 250px;
+		width: 442px;
 		height: 90px;
 		float: left;
 	}
@@ -1727,11 +1847,110 @@ fieldset.user_listing{
 	}
 	#topmenu_wrapper{
 	margin: 0 auto;
-	width: 1130px;
+	width: 740px;
 	position: relative;
 	z-index: 1000;
 	}
-	
+	#topmenu_left{
+		display: none;
+
+	}
+	#topmenu_right{
+		display: none;
+
+	}
+	#topmenu{
+	width: 99%;}
+	#loginform p{
+		text-align:center;
+	}
+	#nav li {
+	float:left;
+	display:block;
+	position:relative;
+	font-size: 12px;
+	font-family: arial;
+	color: #fff;
+	font-weight : bold;
+}
+/* this is the parent menu */
+#nav li a {
+	text-align: center;
+	display:block;
+	padding: 18px 12px;
+	text-decoration:none;
+	color:#fff;
+	text-align:center;
+	float: left;
+	background:none;
+	-webkit-transition: all 0.2s ease-out;  /* Saf3.2+, Chrome */
+ -moz-transition: all 0.5s ease-out;  /* FF4+ */
+  -ms-transition: all 0.5s ease-out;  /* IE10 */
+   -o-transition: all 0.5s ease-out;  /* Opera 10.5+ */
+	  transition: all 0.5s ease-out;
+}
+#nav li a:hover {
+	/*text-shadow : 0 0 50px #fff,0 0 40px #fff;*/
+	padding:14px 25px 14px 25px;
+	color : #fff;
+}
+/* you can make a different style for default selected value */
+#nav a.selected {
+	color:#f00;
+}
+/* submenu, it's hidden by default */
+#nav ul {
+	position:absolute;
+	left:0;
+	display:none;
+	margin:48px 0 0 0px;
+	list-style:none;
+	z-index: 100;
+	font-size : 13px;
+	font-weight : bold;
+	background : #ffffff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dcdcdc)); /* Safari 4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #ffffff, #dcdcdc); /* Chrome 10+, Safari 5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #ffffff, #dcdcdc); /* Firefox 3.6-15 */
+	background-image:      -o-linear-gradient(top, #ffffff, #dcdcdc); /* Opera 11.10+ */
+	background-image:         linear-gradient(to bottom, #ffffff, #dcdcdc); /* Firefox 16+ */
+	padding:10px;
+	border : 1px solid #cacaca;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+#nav ul li {
+	width:190px;
+	/*border-top:1px solid #000;*/
+}
+/* display block will make the link fill the whole area of LI */
+#nav ul a {
+	display:block;
+	height:20px;
+	padding: 5px 5px;
+	color:#757575;
+	width:190px;
+	text-align: left;
+	font-size : 13px;
+}
+#nav ul a:hover {
+	text-decoration:none;
+	height:13px;
+	color : #fff;
+	background : #489700;
+	width : 87%;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding : 15px 15px 15px 10px;
+}
 	#right_wrapper{
 		float: none;
 		width: 440px;
@@ -1892,11 +2111,19 @@ fieldset.user_listing{
 /* VIEWPORT < 524px */
 
 @media only screen and (max-width: 524px){
-	#logo, #header, #topmenu_wrapper, #logo, #left_wrapper, #right_wrapper, #loginform, #topmenu_left, #topmenu, #nav, #topmenu_right, #footer, #container{ width: 300px; }, #bottom_banner, #bottom_banner2, #top_banner, #news_wrapper, #testi_wrapper, #footer_wrapper, #footer_col_1, #footer_col_2, #footer_col_3, #footer_col_4, #listing_premium_list, #premium_photo, #premium_detail
+	#logo, .row, #header, #topmenu_wrapper, #logo, #left_wrapper, #right_wrapper, #loginform, #topmenu_left, #topmenu, #nav, #topmenu_right, #footer, #container{ width: 300px; }, #bottom_banner, #bottom_banner2, #top_banner, #news_wrapper, #testi_wrapper, #footer_wrapper, #footer_col_1, #footer_col_2, #footer_col_3, #footer_col_4, #listing_premium_list, #premium_photo, #premium_detail, #form_line
 	{
 		left: 0;
 	}
-	
+	.row h1 a{
+	display: block;
+	text-indent: -999999px;
+	background: url(images/logo_small.png) no-repeat;
+	width: 400px;
+	height: 90px;
+	float: left;
+	margin-bottom: 40px;
+}
 	#logo{
 		display: block;
 		text-indent: -999999px;
@@ -1912,6 +2139,13 @@ fieldset.user_listing{
 		text-align:center;
 		width: 100%;
 	}
+	#form_line {
+float: left;
+width: 88%;
+height: 1px;
+background: #b1b1b0;
+margin: 20px 0 0 20px;
+}
 	#loginform p{
 		text-align:center;
 	}
@@ -1919,10 +2153,7 @@ fieldset.user_listing{
 		margin: 0 auto;
 	}
 	#topmenu_wrapper{
-	margin: 0 auto;
-	width: 1130px;
-	position: relative;
-	z-index: 1000;
+	display: none;
 	}
 	
 	#right_wrapper{
@@ -2055,4 +2286,29 @@ fieldset.user_listing{
 		float: left;
 		margin-right: 30px;
 	}
+	#premium_detail {
+display: none;
+}
+#listing_premium_list {
+width: 97%;
+height: 40px
+}
+span.adv_name {
+float: left;
+font-family: arial;
+font-size: 10px;
+color: #000604;
+margin: 7px 0 0 15px;
+}
+p.adv_price {
+float: right;
+text-align: right;
+font-family: arial;
+font-size: 10px;
+color: #000604;
+margin: 7px 10px 0 0;
+}
+#search_wrapper {
+	display: none;
+}
 }

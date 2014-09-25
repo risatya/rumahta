@@ -24,13 +24,14 @@
 	<script src="<?php echo base_url();?>file/js/jquery-1.7.1.js" type="text/javascript"></script>
 	<script src="<?php echo base_url();?>file/js/jquery-ui.min.js" type="text/javascript"></script>
     <script src="<?php echo base_url();?>file/js/bootstrap.js" type="text/javascript"></script>
-	
+
 </head>
 <body>
 	<div id="header">
 	<div class="row">
-		<div id="logo"><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>file/img/logo.png"></a>
-		<h1 style="display:none;"><a href="<?php echo base_url();?>">MetaHD.Com</a></h1>
+		<div id="logo">
+
+		<h1><a href="<?php echo base_url();?>" title="Rumahta.com"><img src="<?php echo base_url();?>file/img/logo.png"></a></h1>
 		</div>
 		
 		<div id="loginform">

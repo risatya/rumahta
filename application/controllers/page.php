@@ -206,28 +206,6 @@ class Page extends CI_Controller {
 			$data['kabupaten'] = $this->mdl_home->getKabInSulsel();
 			$data['testimoni'] = $this->mdl_home->getMemberTesti();
 			$data['news'] = $this->mdl_home->getMemberNews();
-			
-			$data['premium'] = $this->mdl_home->getPremiumListingCount();
-			$data['free'] = $this->mdl_home->getFreeListingCount();
-
-			$total_row = $this->db->count_all('tbl_listing_member');
-			
-			$per_page = 10;
-			if($data['premium'] > $per_page){
-				$sisaPremium = $data['premium'] % $per_page; //jumlah listing premium di halamn terahir ?
-				$premiumLastPage = floor($data['premium'] / $per_page);
-			}
-			else{
-				$sisaPremium = $data['premium'];
-				$premiumLastPage = 0;
-			}
-			$sisaFree = $per_page - $sisaPremium;
-			$a = $sisaFree % 2;
-			$sessionData = array();
-			if($a == 1){
-				$start_page = $premiumLastPage * $per_page;
-			}
-			
 			$this->load->library('pagination');
 			$config['base_url'] 	= base_url().'index.php/page/all_nextpage/';
 			$config['total_rows'] 	= $total_row;

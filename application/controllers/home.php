@@ -20,26 +20,16 @@ class Home extends CI_Controller {
 			$data['testimoni'] = $this->mdl_home->getMemberTesti();
 			$data['news'] = $this->mdl_home->getMemberNews();
 			
+			//start premium listing
 			$data['premium_listing'] = $this->mdl_listing->getPremiumListingForPage(5,0);
 			//ambil cover foto masing - masing listing premium.
-			$a = 0;
-			$data['premium_listing'] = array();
-			foreach($data['premium_listing'] as $item):
-				$cover = $this->mdl_home->getCoverPhotoByID($item->id_listing_member);
-				$data['premium_listing'][$a] = $cover[0]->listing_photo_list;
-				$a++;
-			endforeach;
 
-			$total_row = $this->db->count_all('tbl_listing_member');
-			
-			if($start_page === 0){
-				$per_page = 15;
-			}
+
 			
 			$this->load->library('pagination');
 			$config['base_url'] 	= base_url().'index.php/page/all_nextpage/';
 			$config['total_rows'] 	= $total_row;
-			$config['per_page'] 	= 15;
+			$config['per_page'] 	= 10;
 			$config['first_link'] 	= 'First';
 			$config['last_link'] 	= 'Last';
 			$config['next_link'] 	= ' Next &raquo;';
@@ -47,7 +37,7 @@ class Home extends CI_Controller {
 			$this->pagination->initialize($config);
 
 			if($start_page === 0){
-				$data['list_listing'] = $this->mdl_listing->getListingForPage(15,0);
+				$data['list_listing'] = $this->mdl_listing->getListingForPage(10,0);
 			}
 			else{
 				$data['list_listing'] = $this->mdl_listing->getListingForPage($config['per_page'],0);
@@ -63,6 +53,7 @@ class Home extends CI_Controller {
 				$data['cover_listing'][$x] = $cover[0]->listing_photo_list;
 				$x++;
 			endforeach;
+			
 			
 			/***************************************************/
 			//tambah statistik jumlah pengunjung web di database.
