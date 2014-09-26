@@ -30,9 +30,9 @@
 <body>
 	<div id="header">
 	<div class="row">
-				<div id="logo">
-
-		<h1><a href="<?php echo base_url();?>" title="Rumahta.com"><img src="<?php echo base_url();?>file/img/logo.png"></a></h1>
+		<div id="logo">
+		<h2><a href="<?php echo base_url();?>" title="Rumahta.com"><img src="<?php echo base_url();?>file/img/logo.png"></a></h2>
+		<h1 style="display:none;">Rumahta.com</h1>
 		</div>
 		<div id="loginform">
 		<?php foreach($member as $item): 

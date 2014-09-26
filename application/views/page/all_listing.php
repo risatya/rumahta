@@ -2,7 +2,10 @@
 					<div id="listing_premium_title">
 						<span>Listing Premium</span>
 					</div>
-<?php foreach($premium_listing as $premiumitem): 
+<?php 
+error_reporting(0);
+foreach($premium_listing as $premiumitem): 
+
 ?>
 <div id="listing_premium_list">
 						<?php
