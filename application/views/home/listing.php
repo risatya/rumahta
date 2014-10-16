@@ -18,11 +18,13 @@
 						<?php echo anchor("page/listing_detail/".$item->id_listing_member,$str,array("id"=>"premium_title")); ?>
 							
 						<div id="premium_photo">
+							
 							<?php if($cover_premium[$x] != null){ ?>
 								<?php echo anchor("page/listing_detail/".$item->id_listing_member,"<img src='".base_url()."file/img/premium/listing_pic/".$cover_premium[$x]."' />")?>
 							<?php } else { ?>
 								<?php echo anchor("page/listing_detail/".$item->id_listing_member,"<img src='".base_url()."file/img/premium/listing_pic/default.jpg' />")?>
 							<?php } ?>
+
 						</div>
 						<div id="premium_detail">
 							<?php echo ucfirst(strtolower($item->nama_kabupaten)); ?> | <?php echo ($item->harga != null ? "Rp. ".$item->harga : "Rp. -"); ?><br/>
@@ -43,6 +45,7 @@
 								<?php //echo anchor("page/listing_detail/".$item->id_listing_member,"Lihat Detail",array("class"=>"btn")); ?>
 							</p>
 						</div>
+						<div class="sale-box"><span class="on_sale title_shop">New</span></div>
 					</div>
 					<div id="premium_line"></div>
 					
@@ -70,6 +73,7 @@
 							<?php echo (strlen($item->alamat) > 55 ? substr($item->alamat,0,52)."..." : $item->alamat); ?>
 						</div>
 					</div>
+					<div id="premium_line"></div>
 					<?php 
 					$z++;
 					endforeach; 

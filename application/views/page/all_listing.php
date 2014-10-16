@@ -4,8 +4,10 @@
 					</div>
 <?php 
 error_reporting(0);
-foreach($premium_listing as $premiumitem): 
 
+foreach($premium_listing as $premiumitem): 
+	$cover = $this->mdl_home->getCoverPhotoByID($premiumitem->id_listing_member);
+	$foto=$cover[0]->listing_photo_list;
 ?>
 <div id="listing_premium_list">
 						<?php
@@ -16,10 +18,10 @@ foreach($premium_listing as $premiumitem):
 						<?php echo anchor("page/listing_detail/".$premiumitem->id_listing_member."/".url_title($premiumitem->nama_kategori."-".$premiumitem->judul),$str,array("id"=>"premium_title")); ?><h2>
 							
 						<div id="premium_photo">
-							<?php if($cover_listing[$counter] != null){ ?>
+							<?php if($foto != null){ ?>
 								<div class="photo_listing_wrapper">
 									<?php if($premiumitem->laku == 1){ ?><span class="photo_marker2"><i class="icon-tags icon-white"><?php echo ($premiumitem->status_kategori == 1 ? "TERJUAL" : "TERSEWA"); ?></i></span><?php } ?>
-									<?php echo anchor("page/listing_detail/".$premiumitem->id_listing_member."/".url_title($premiumitem->nama_kategori."-".$premiumitem->judul),"<img src='".base_url()."file/img/premium/listing_pic/".$cover_listing[$counter]."' />")?>
+									<?php echo anchor("page/listing_detail/".$premiumitem->id_listing_member."/".url_title($premiumitem->nama_kategori."-".$premiumitem->judul),"<img src='".base_url()."file/img/premium/listing_pic/".$foto."' />")?>
 								</div>
 							<?php } else { ?>
 								<div class="photo_listing_wrapper">
@@ -29,6 +31,7 @@ foreach($premium_listing as $premiumitem):
 							<?php } ?>
 						</div>
 						<div id="premium_detail">
+							<div class="postview"><img src="<?php echo base_url(); ?>image/premium.png"></div>
 							<b><?php echo ucfirst(strtolower($premiumitem->nama_kabupaten))." | ".date('d-F-Y',strtotime($premiumitem->submit_date)); ?></b><br/>
 							<?php echo (strlen($premiumitem->alamat) > 60 ? substr($premiumitem->alamat,0,60)."..." : $premiumitem->alamat); ?> <br/>
 							<?php echo (strlen($premiumitem->keterangan) > 60 ? substr($premiumitem->keterangan,0,60)."..." : $premiumitem->keterangan); ?> <br/>
@@ -48,14 +51,20 @@ foreach($premium_listing as $premiumitem):
 								<?php $z = 0; ?>
 							</p>
 						</div>
+						<div class="sale-box"><span class="on_sale title_shop">New</span></div>
 					</div>
 					<div id="premium_line"></div>
-					<?php endforeach ?>
+					<?php 
+					
+					endforeach ?>
 
 				</div>
 				<div id="listing_premium_wrapper">
 <?php
+
 	foreach($list_listing as $item){
+	$cover1 = $this->mdl_home->getCoverPhotoByID($item->id_listing_member);
+	$foto1=$cover1[0]->listing_photo_list;
 ?>
 						<div id="listing_premium_list">
 						<?php
@@ -66,10 +75,10 @@ foreach($premium_listing as $premiumitem):
 						<?php echo anchor("page/listing_detail/".$item->id_listing_member."/".url_title($item->nama_kategori."-".$item->judul),$str,array("id"=>"premium_title")); ?>
 							
 						<div id="premium_photo">
-							<?php if($cover_listing[$counter] != null){ ?>
+							<?php if($foto1 != null){ ?>
 								<div class="photo_listing_wrapper">
 									<?php if($item->laku == 1){ ?><span class="photo_marker2"><i class="icon-tags icon-white"><?php echo ($item->status_kategori == 1 ? "TERJUAL" : "TERSEWA"); ?></i></span><?php } ?>
-									<?php echo anchor("page/listing_detail/".$item->id_listing_member."/".url_title($item->nama_kategori."-".$item->judul),"<img src='".base_url()."file/img/free/listing_pic/".$cover_listing[$counter]."' />")?>
+									<?php echo anchor("page/listing_detail/".$item->id_listing_member."/".url_title($item->nama_kategori."-".$item->judul),"<img src='".base_url()."file/img/free/listing_pic/".$foto1."' />")?>
 								</div>
 							<?php } else { ?>
 								<div class="photo_listing_wrapper">
@@ -79,6 +88,7 @@ foreach($premium_listing as $premiumitem):
 							<?php } ?>
 						</div>
 						<div id="premium_detail">
+							<div class="postview"><img src="<?php echo base_url(); ?>image/free.png"></div>
 							<b><?php echo ucfirst(strtolower($item->nama_kabupaten))." | ".date('d-F-Y',strtotime($item->submit_date)); ?></b><br/>
 							<?php echo (strlen($item->alamat) > 60 ? substr($item->alamat,0,60)."..." : $item->alamat); ?> <br/>
 							<?php echo (strlen($item->keterangan) > 60 ? substr($item->keterangan,0,60)."..." : $item->keterangan); ?> <br/>

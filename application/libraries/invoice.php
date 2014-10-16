@@ -15,18 +15,18 @@ class Invoice{
 		Proses pendaftaran member anda di rumahta.com hampir selesai.
 		Silakan klik link dibawah ini untuk mengaktifkan akun anda.
 		Link verifikasi:
-		http://rumahta.com/index.php/home/verifikasi/".$config['verification_key']."
+		http://".$base_url()."index.php/home/verifikasi/".$config['verification_key']."
 			
 		Data pendaftaran anda :
 		Username : ".$config['username']."
 		Password : ".$config['password']."
 			
-		terima kasih telah mendaftar di rumahta.com
+		terima kasih telah mendaftar di Rumahta.Com
 		
-		Mohon data login anda diingat dan simpan baik-baik jangan sampai diketahui orang lan
+		Mohon data login anda diingat dan simpan baik-baik jangan sampai diketahui orang lain
 			
 		regards,
-		rumahta.com
+		Rumahta.com
 		";
 		
 		$CI->email->from('mail@rumahta.com','rumahta.com');

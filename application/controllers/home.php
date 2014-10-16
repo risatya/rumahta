@@ -6,7 +6,8 @@ class Home extends CI_Controller {
 		$this->load->model('mdl_home');
 		$this->load->model('mdl_member');
 		$this->load->model('mdl_listing');
-		
+		$this->load->helper(array('xml','text'));
+		$this->load->model('tb_listing');
 		date_default_timezone_set('Asia/Jakarta');
     }
 	public function index(){
@@ -24,8 +25,7 @@ class Home extends CI_Controller {
 			$data['premium_listing'] = $this->mdl_listing->getPremiumListingForPage(5,0);
 			//ambil cover foto masing - masing listing premium.
 
-
-			
+			$total_row = $this->db->count_all('tbl_listing_member');	
 			$this->load->library('pagination');
 			$config['base_url'] 	= base_url().'index.php/page/all_nextpage/';
 			$config['total_rows'] 	= $total_row;
@@ -36,13 +36,13 @@ class Home extends CI_Controller {
 			$config['prev_link'] 	= ' &laquo; Prev';
 			$this->pagination->initialize($config);
 
-			if($start_page === 0){
+			if($start_page == 0){
 				$data['list_listing'] = $this->mdl_listing->getListingForPage(10,0);
 			}
 			else{
 				$data['list_listing'] = $this->mdl_listing->getListingForPage($config['per_page'],0);
 			}
-			
+			 $data["links"] = $this->pagination->create_links();
 
 
 			//ambil cover foto masing - masing listing premium.
@@ -664,5 +664,22 @@ class Home extends CI_Controller {
 		else{
 			echo "gagal. kampret.";
 		}
+	}
+	public function rss(){
+
+		$data = array(
+			'encoding' 		=> 'utf-8',
+			'feed_name' 		=> 'rumahta.com',
+			'feed_url' 		=> 'http://www.rumahta.com/feed/',
+			'page_description' 	=> 'Rumahta.Com | Rumah Dijual di Makasar',
+			'page_language' 	=> 'en-ca',
+			'creator_email' 	=> 'admin@rumahta.com',
+			'posts' 		=> $this->tb_listing->get_posts(10)
+		);
+
+
+		header("Content-Type: application/rss+xml");
+		$this->load->vars($data);
+		$this->load->view('rss');
 	}
 }

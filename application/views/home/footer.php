@@ -34,6 +34,7 @@
 				<a href="#">Testimonial</a><br/>
 				<a href="#">Berita terbaru</a><br/>
 				<?php echo anchor("page/page_detail/3/kontak","Kontak kami"); ?><br/>
+				<?php echo anchor("home/rss","RSS Feed"); ?><br/>
 				Copyright &copy; 2012 | Rumahta.com
 			</div>
 		</div>

@@ -220,7 +220,7 @@
 									<?php echo $item->keterangan ; ?>
 								</div>
 								
-								<?
+								<?php
 								$penghuni = ($item->penghuni == 1 ? "pria" : ($item->penghuni == 2 ? "wanita" : ($item->penghuni == 3 ? "karyawan" : ($item->penghuni == 4 ? "karyawati" : ($item->penghuni == 5 ? "Pria dan wanita" : ($item->penghuni == 6 ? "suami istri" : "-"))))));
 								$penghuni_m = ($item->penghuni_mayoritas == 1 ? "Pelajar/mahasiswa" : ($item->penghuni_mayoritas == 2 ? "keluarga" : ($item->penghuni_mayoritas == 3 ? "karyawan" : ($item->penghuni_mayoritas == 4 ? "karyawati" : ""))));
 								?>

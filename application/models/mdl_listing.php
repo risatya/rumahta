@@ -64,8 +64,8 @@ Class Mdl_listing extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('tbl_listing_member');
 		$this->db->where('expired_date >=',$now);
-		$this->db->order_by('status_listing','desc');
-		$this->db->order_by('id_listing_member','desc');
+		$this->db->order_by('submit_date','desc');
+		//$this->db->order_by('id_listing_member','desc');
 		$this->db->limit($num,$offset);
 		$this->db->join('tbl_listing', 'tbl_listing_member.id_listing = tbl_listing.id_listing', 'left');
 		$this->db->join('tbl_kategori', 'tbl_listing_member.id_kategori = tbl_kategori.id_kategori', 'left');
